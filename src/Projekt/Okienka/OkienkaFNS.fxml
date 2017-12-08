@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.LoginControler">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="1024.0" AnchorPane.bottomAnchor="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.49090995788574" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@Ikona%20FNS.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="927.0" layoutY="22.0" mnemonicParsing="false" onAction="#wyloguj" prefHeight="25.0" prefWidth="70.0" text="Wyloguj" AnchorPane.rightAnchor="26.599999999999994" AnchorPane.topAnchor="22.0" />
+            <Label layoutX="81.0" layoutY="10.0" prefHeight="48.0" prefWidth="272.0" text="FastNet Software (Beta v2)" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutY="65.0" prefHeight="704.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+        <tabs>
+          <Tab text="Witaj">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
+                     <children>
+                        <ImageView fitHeight="470.0" fitWidth="522.0" layoutX="454.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="109.12941894531252" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="109.0">
+                           <image>
+                              <Image url="@Logo%20Firmy%20FNS.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="27.0" layoutY="168.0" prefHeight="67.0" prefWidth="426.0" text="Witaj w programie Firmy FNS" AnchorPane.leftAnchor="27.0">
+                           <font>
+                              <Font name="System Bold Italic" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Klienci">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
+                     <children>
+                        <ScrollPane layoutX="20.0" layoutY="90.0" prefHeight="250.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+                           <content>
+                              <TableView prefHeight="255.0" prefWidth="968.0" />
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="40.0" layoutY="430.0" prefHeight="18.0" prefWidth="36.0" text="Imię :" />
+                        <Label layoutX="40.0" layoutY="461.0" text="Nazwisko :" />
+                        <Label layoutX="40.0" layoutY="492.0" text="Data urodzenia :" />
+                        <Label layoutX="40.0" layoutY="523.0" text="PESEL :" />
+                        <Label layoutX="350.0" layoutY="492.0" text="Miejscowość :" />
+                        <Label layoutX="350.0" layoutY="430.0" text="Ulica :" />
+                        <Label layoutX="350.0" layoutY="461.0" text="Nr domu/lokalu :" />
+                        <Label layoutX="660.0" layoutY="430.0" text="Numer Telefonu :" />
+                        <Label layoutX="660.0" layoutY="461.0" text="Adres E-mail :" />
+                        <DatePicker layoutX="150.0" layoutY="488.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Label layoutX="350.0" layoutY="523.0" text="Kod pocztowy :" />
+                        <TextField layoutX="150.0" layoutY="426.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Button layoutX="770.0" layoutY="510.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Dodaj ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="837.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Modyfikuj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="928.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Usuń ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="37.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="20.0" layoutY="10.0" text="Szukaj klienta :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+                        <Separator prefHeight="43.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="355.0" />
+                        <Label layoutX="20.0" layoutY="390.0" text="Dodaj klienta :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="390.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="150.0" layoutY="457.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="150.0" layoutY="519.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="460.0" layoutY="426.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="460.0" layoutY="457.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="460.0" layoutY="488.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="460.0" layoutY="519.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="770.0" layoutY="426.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField layoutX="770.0" layoutY="457.0" prefHeight="25.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Usługi">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="390.0" text="Dodaj pakiet:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="390.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="430.0" text="Nazwa:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="510.0" text="Prędkość:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="470.0" text="Technologia:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="590.0" text="Cena:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="200.0" layoutY="430.0" prefHeight="25.0" prefWidth="150.0" promptText="Nazwa pakietu" />
+                        <ComboBox layoutX="200.0" layoutY="590.0" prefWidth="150.0" />
+                        <Button layoutX="928.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Dodaj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="40.0" layoutY="630.0" text="Okres umowy [mc]:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ScrollPane layoutX="20.0" layoutY="80.0" prefHeight="250.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+                           <content>
+                              <TableView prefHeight="255.0" prefWidth="968.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="837.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Modyfikuj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="928.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Usuń" AnchorPane.bottomAnchor="308.0" AnchorPane.rightAnchor="20.799999999999997">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="20.0" layoutY="10.0" text="Szukaj pakiet:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="35.0" />
+                        <Separator layoutX="1.0" layoutY="353.0" prefHeight="43.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="355.0" />
+                        <RadioButton layoutX="200.0" layoutY="474.0" mnemonicParsing="false" text="FTTH" />
+                        <RadioButton layoutX="260.0" layoutY="474.0" mnemonicParsing="false" text="ADSL2+" />
+                        <RadioButton layoutX="350.0" layoutY="554.0" mnemonicParsing="false" text="10 Mbit/s - 512 kbit/s " />
+                        <RadioButton layoutX="200.0" layoutY="554.0" mnemonicParsing="false" text="6 Mbit/s - 512 kbit/s" />
+                        <RadioButton layoutX="200.0" layoutY="514.0" mnemonicParsing="false" text="20 Mbit/s - 2Mbit/s" />
+                        <RadioButton layoutX="500.0" layoutY="514.0" mnemonicParsing="false" text="60 Mbit/s - 2Mbit/s" />
+                        <RadioButton layoutX="350.0" layoutY="514.0" mnemonicParsing="false" text="40 Mbit/s - 2Mbit/s" />
+                        <RadioButton layoutX="500.0" layoutY="554.0" mnemonicParsing="false" text="15 Mbit/s - 512 kbit/s" />
+                        <RadioButton layoutX="200.0" layoutY="634.0" mnemonicParsing="false" text="12" />
+                        <RadioButton layoutX="260.0" layoutY="634.0" mnemonicParsing="false" text="24" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pracownicy">
+               <content>
+                  <AnchorPane minHeight="338.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" style="-fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="10.0" text="Szukaj pracownika:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Imię, Nazwisko" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="35.0" />
+                        <Separator layoutX="9.0" layoutY="63.0" prefHeight="34.0" prefWidth="1022.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="37.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <GridPane layoutX="34.0" layoutY="95.0" prefHeight="234.0" prefWidth="307.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="95.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="102.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="193.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="PESEL :" />
+                              <Label text="Imie :" GridPane.rowIndex="1" />
+                              <Label text="Nazwisko :" GridPane.rowIndex="2" />
+                              <Label text="Ulica :" GridPane.rowIndex="3" />
+                              <Label text="Nr domu :" GridPane.rowIndex="4" />
+                              <Label text="Miejscowość :" GridPane.rowIndex="5" />
+                              <Label text="Nr telefonu :" GridPane.rowIndex="6" />
+                              <Label text="E-mail :" GridPane.rowIndex="7" />
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <TextField prefHeight="25.0" prefWidth="143.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                        <RadioButton layoutX="620.0" layoutY="117.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="238.0" text="pracownik / wykonawca przyłącza" />
+                        <RadioButton layoutX="620.0" layoutY="150.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="272.0" text="użytkownik / (handlowiec, admin itp)" />
+                        <Label layoutX="620.0" layoutY="98.0" prefHeight="18.0" prefWidth="98.0" text="Typ pracownika :" />
+                        <Button layoutX="749.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Zapisz">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="840.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Modyfikuj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="928.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Usuń">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="380.0" layoutY="94.0" prefHeight="26.0" prefWidth="134.0" text="Login :" />
+                        <Label layoutX="380.0" layoutY="150.0" prefHeight="18.0" prefWidth="95.0" text="Hasło :" />
+                        <TextField layoutX="380.0" layoutY="176.0" prefHeight="25.0" prefWidth="200.0" />
+                        <TextField layoutX="380.0" layoutY="120.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="380.0" layoutY="277.0" text="Data zatrudnienia :" />
+                        <Label layoutX="380.0" layoutY="221.0" prefHeight="18.0" prefWidth="95.0" text="Wynagrodzenie :" />
+                        <TextField layoutX="380.0" layoutY="247.0" prefHeight="25.0" prefWidth="200.0" promptText="zł" />
+                        <ScrollPane layoutX="34.0" layoutY="353.0" prefHeight="300.0" prefWidth="984.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="989.0">
+                                 <children>
+                                    <TableView prefHeight="312.0" prefWidth="983.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <DatePicker layoutX="380.0" layoutY="303.0" prefHeight="25.0" prefWidth="200.0" promptText="DD.MM.RRRR" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Zamównienia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
+                     <children>
+                        <Accordion layoutX="281.0" layoutY="110.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Accordion>
+                        <Label layoutX="20.0" layoutY="10.0" text="Wyszukaj klienta :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="121.0" layoutY="102.0" />
+                        <Label layoutX="20.0" layoutY="504.0" text="Data zawarcia umowy:" AnchorPane.leftAnchor="21.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="20.0" layoutY="533.0" prefHeight="30.0" prefWidth="150.0" promptText="DD.MM.RRRR" AnchorPane.leftAnchor="21.0" />
+                        <Label layoutX="20.0" layoutY="255.0" text="Wyszukaj pakiet :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="530.0" layoutY="628.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Generuj fakturę" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="529.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextField layoutX="170.0" layoutY="7.0" prefHeight="30.0" prefWidth="200.0" promptText="Imię Nazwisko" AnchorPane.leftAnchor="170.0" />
+                        <Button layoutX="389.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj" AnchorPane.leftAnchor="389.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextField layoutX="170.0" layoutY="252.0" prefHeight="30.0" prefWidth="200.0" promptText="Imię Nazwisko" AnchorPane.leftAnchor="170.0" />
+                        <Button layoutX="420.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj" AnchorPane.leftAnchor="420.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ScrollPane layoutX="20.0" layoutY="45.0" prefHeight="200.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="207.0" prefWidth="971.0">
+                                 <children>
+                                    <TableView prefHeight="207.2" prefWidth="971.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <Label layoutX="529.0" layoutY="255.0" text="Wyszukaj pracownika :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="713.0" layoutY="252.0" prefHeight="30.0" prefWidth="200.0" promptText="Imię Nazwisko" />
+                        <Button layoutX="928.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="737.0" layoutY="628.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Dodaj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="797.0" layoutY="11.0" prefHeight="13.0" prefWidth="199.0" text="Przypisz pracownika do wykoanania zadania">
+                           <font>
+                              <Font name="System Bold Italic" size="9.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="837.0" layoutY="628.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Usuń">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="928.0" layoutY="628.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Modyfikuj" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="530.0" layoutY="504.0" text="Zmień status zamówienia:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="530.0" layoutY="539.0" mnemonicParsing="false" text="oczekuje" />
+                        <RadioButton layoutX="615.0" layoutY="539.0" mnemonicParsing="false" text="w trakcie" />
+                        <ScrollPane layoutX="21.0" layoutY="290.0" prefHeight="200.0" prefWidth="475.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="200.0" prefWidth="465.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <ScrollPane layoutX="536.0" layoutY="290.0" prefHeight="200.0" prefWidth="475.0" AnchorPane.rightAnchor="20.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="200.0" prefWidth="465.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="21.0" layoutY="585.0" text="Data końca umowy:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="21.0" layoutY="614.0" prefHeight="30.0" prefWidth="150.0" promptText="DD.MM.RRRR" />
+                        <Label layoutX="220.0" layoutY="504.0" text="Klient :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="345.0" layoutY="501.0" prefHeight="30.0" prefWidth="150.0" promptText="Imię Nazwisko" />
+                        <Separator layoutX="503.0" layoutY="506.0" orientation="VERTICAL" prefHeight="151.0" prefWidth="18.0" />
+                        <Separator layoutX="201.0" layoutY="510.0" orientation="VERTICAL" prefHeight="151.0" prefWidth="18.0" />
+                        <Label layoutX="220.0" layoutY="559.0" text="Usługa :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="345.0" layoutY="557.0" prefHeight="30.0" prefWidth="150.0" promptText="Imię Nazwisko" />
+                        <Label layoutX="220.0" layoutY="617.0" text="Pracownik :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="345.0" layoutY="614.0" prefHeight="30.0" prefWidth="150.0" promptText="Imię Nazwisko" />
+                        <RadioButton layoutX="701.0" layoutY="539.0" mnemonicParsing="false" text="zrealizowane" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Finanse">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="10.0" text="Wyszukaj pakiet :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+                        <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Szukaj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="350.0" layoutY="10.0" text="Umowa zawarta :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="390.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" />
+                        <DatePicker layoutX="640.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label layoutX="350.0" layoutY="37.0" text="od :">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="600.0" layoutY="37.0" text="do :">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="854.0" layoutY="299.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutY="335.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Label layoutX="500.0" layoutY="299.0" text="Wybrany pakiet :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="640.0" layoutY="297.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+                        <ScrollPane layoutX="20.0" layoutY="75.0" prefHeight="215.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="984.0">
+                                 <children>
+                                    <TableView prefHeight="215.2" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <Label layoutX="20.0" layoutY="342.0" text="Wyszukaj pracownika :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="20.0" layoutY="367.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+                        <Button layoutX="230.0" layoutY="369.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Szukaj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ScrollPane layoutX="20.0" layoutY="407.0" prefHeight="215.0" prefWidth="984.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="984.0">
+                                 <children>
+                                    <TableView prefHeight="215.2" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="854.0" layoutY="631.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="465.0" layoutY="631.0" text="Wybrany pracownik :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="640.0" layoutY="629.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Praca">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
+                     <children>
+                        <Label layoutX="40.0" layoutY="30.0" prefHeight="25.0" prefWidth="172.0" text="Zalogowany jako :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView layoutX="36.0" layoutY="263.0" prefHeight="310.0" prefWidth="944.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="40.0" layoutY="200.0" prefHeight="25.0" prefWidth="295.0" text="Obsługuje usługe insalacji:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="860.0" layoutY="604.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Generuj Raport">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="40.0" layoutY="80.0" prefHeight="26.0" prefWidth="189.0" text="Twoje Wynagrodzenie :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
