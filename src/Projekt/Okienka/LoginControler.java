@@ -1,7 +1,6 @@
 package Projekt.Okienka;
 
 import Projekt.ConntectToDB;
-import Projekt.models.LoginModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +25,6 @@ import java.util.ResourceBundle;
  */
 public class LoginControler implements Initializable {
 
-    public LoginModel loginModel = new LoginModel();
 
     @FXML
     private TextField textLogin;
