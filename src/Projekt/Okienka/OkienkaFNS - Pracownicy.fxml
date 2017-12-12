@@ -1,147 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.LoginControler">
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="663.0" minWidth="1024.0" prefHeight="663.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.PracownikKontroler">
    <children>
-      <AnchorPane prefHeight="50.0" prefWidth="1024.0" AnchorPane.bottomAnchor="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.49090995788574" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0">
-               <image>
-                  <Image url="@Ikona%20FNS.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="927.0" layoutY="22.0" mnemonicParsing="false" onAction="#wyloguj" prefHeight="25.0" prefWidth="70.0" text="Wyloguj" AnchorPane.rightAnchor="26.599999999999994" AnchorPane.topAnchor="22.0" />
-            <Label layoutX="81.0" layoutY="10.0" prefHeight="48.0" prefWidth="272.0" text="FastNet Software (Beta v2)" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="10.0">
-               <font>
-                  <Font name="System Bold Italic" size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <TabPane layoutY="65.0" prefHeight="704.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
-        <tabs>
-            <Tab text="Pracownicy">
-               <content>
-                  <AnchorPane minHeight="338.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" style="-fx-background-radius: 5;">
-                     <children>
-                        <Label layoutX="20.0" layoutY="10.0" text="Szukaj pracownika:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Imię, Nazwisko" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="35.0" />
-                        <Separator layoutX="9.0" layoutY="63.0" prefHeight="34.0" prefWidth="1022.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                        <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="37.0">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <GridPane layoutX="34.0" layoutY="95.0" prefHeight="234.0" prefWidth="307.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="95.0">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="102.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="193.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label text="PESEL :" />
-                              <Label text="Imie :" GridPane.rowIndex="1" />
-                              <Label text="Nazwisko :" GridPane.rowIndex="2" />
-                              <Label text="Ulica :" GridPane.rowIndex="3" />
-                              <Label text="Nr domu :" GridPane.rowIndex="4" />
-                              <Label text="Miejscowość :" GridPane.rowIndex="5" />
-                              <Label text="Nr telefonu :" GridPane.rowIndex="6" />
-                              <Label text="E-mail :" GridPane.rowIndex="7" />
-                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                              <TextField prefHeight="25.0" prefWidth="143.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                           </children>
-                        </GridPane>
-                        <RadioButton layoutX="620.0" layoutY="117.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="238.0" text="pracownik / wykonawca przyłącza" />
-                        <RadioButton layoutX="620.0" layoutY="150.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="272.0" text="użytkownik / (handlowiec, admin itp)" />
-                        <Label layoutX="620.0" layoutY="98.0" prefHeight="18.0" prefWidth="98.0" text="Typ pracownika :" />
-                        <Button layoutX="749.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Zapisz">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="840.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Modyfikuj">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="928.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Usuń">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <Label layoutX="380.0" layoutY="94.0" prefHeight="26.0" prefWidth="134.0" text="Login :" />
-                        <Label layoutX="380.0" layoutY="150.0" prefHeight="18.0" prefWidth="95.0" text="Hasło :" />
-                        <TextField layoutX="380.0" layoutY="176.0" prefHeight="25.0" prefWidth="200.0" />
-                        <TextField layoutX="380.0" layoutY="120.0" prefHeight="25.0" prefWidth="200.0" />
-                        <Label layoutX="380.0" layoutY="277.0" text="Data zatrudnienia :" />
-                        <Label layoutX="380.0" layoutY="221.0" prefHeight="18.0" prefWidth="95.0" text="Wynagrodzenie :" />
-                        <TextField layoutX="380.0" layoutY="247.0" prefHeight="25.0" prefWidth="200.0" promptText="zł" />
-                        <ScrollPane layoutX="34.0" layoutY="353.0" prefHeight="300.0" prefWidth="984.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="1175.0">
-                                 <children>
-                                    <TableView prefHeight="300.0" prefWidth="1175.0">
-                                      <columns>
-                                        <TableColumn minWidth="100.0" prefWidth="100.0" text="Imię" />
-                                        <TableColumn minWidth="100.0" prefWidth="100.0" text="Nazwisko" />
-                                          <TableColumn minWidth="100.0" prefWidth="100.0" text="Zawód" />
-                                          <TableColumn minWidth="100.0" prefWidth="100.0" text="PESEL" />
-                                          <TableColumn minWidth="100.0" prefWidth="100.0" text="Ulica" />
-                                          <TableColumn minWidth="75.0" prefWidth="75.0" text="Nr Domu" />
-                                          <TableColumn minWidth="100.0" prefWidth="100.0" text="Miejsowość" />
-                                          <TableColumn minWidth="150.0" prefWidth="150.0" text="E-mail" />
-                                          <TableColumn minWidth="100.0" prefWidth="100.0" text="Nr Telefonu" />
-                                          <TableColumn minWidth="100.0" prefWidth="100.0" text="Wynagrodzenie" />
-                                          <TableColumn minWidth="150.0" prefWidth="150.0" text="Data Zatrudnienia" />
-                                      </columns>
-                                    </TableView>
-                                 </children>
-                              </AnchorPane>
-                          </content>
-                        </ScrollPane>
-                        <DatePicker layoutX="380.0" layoutY="303.0" prefHeight="25.0" prefWidth="200.0" promptText="DD.MM.RRRR" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
+      <Button layoutX="824.0" layoutY="614.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUsera" prefHeight="34.0" prefWidth="179.0" text="Usuń pracownika">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#pokazPracownik" prefHeight="25.0" prefWidth="130.0" text="Pokaż wszystkich">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="20.0" layoutY="10.0" text="Pracownicy :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Button layoutX="629.0" layoutY="614.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="179.0" text="Modyfikuj pracownika">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="434.0" layoutY="614.0" mnemonicParsing="false" onAction="#openEdycjaDodawanieUsera" prefHeight="34.0" prefWidth="179.0" text="Dodaj pracownika">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="poleszukania" layoutX="690.0" layoutY="40.0" prefHeight="25.0" prefWidth="192.0" promptText="Wyszukaj..." />
+      <Button layoutX="898.0" layoutY="40.0" mnemonicParsing="false" onAction="#szukajPracownika" prefHeight="25.0" prefWidth="105.0" text="Szukaj" />
+      <Label layoutX="690.0" layoutY="10.0" prefHeight="26.0" prefWidth="116.0" text="Wyszukiwanie:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <ScrollPane layoutX="20.0" layoutY="80.0" prefHeight="520.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <content>
+            <TableView fx:id="pracownikTable" prefHeight="531.0" prefWidth="1286.0">
+               <columns>
+                  <TableColumn fx:id="imieColumn" minWidth="100.0" prefWidth="100.0" text="Imię" />
+                  <TableColumn fx:id="nazwiskoColumn" minWidth="100.0" prefWidth="100.0" text="Nazwisko" />
+                  <TableColumn fx:id="zawodColumn" minWidth="100.0" prefWidth="100.0" text="Zawód" />
+                  <TableColumn fx:id="peselColumn" minWidth="100.0" prefWidth="100.0" text="PESEL" />
+                  <TableColumn fx:id="ulicaColumn" minWidth="100.0" prefWidth="100.0" text="Ulica" />
+                  <TableColumn fx:id="nr_domuColumn" minWidth="75.0" prefWidth="75.0" text="Nr Domu" />
+                  <TableColumn fx:id="miejscowoscColumn" minWidth="100.0" prefWidth="100.0" text="Miejsowość" />
+                  <TableColumn fx:id="emailColumn" minWidth="40.0" prefWidth="40.0" text="E-mail" />
+                  <TableColumn fx:id="nr_telefonColumn" minWidth="0.0" prefWidth="182.0" text="Nr Telefonu" />
+                  <TableColumn fx:id="wynagrodzenieColumn" minWidth="100.0" prefWidth="128.0" text="Wynagrodzenie" />
+                  <TableColumn fx:id="data_zatrudnieniaColumn" minWidth="150.0" prefWidth="150.0" text="Data Zatrudnienia" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
