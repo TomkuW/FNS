@@ -5,123 +5,92 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.LoginControler">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="50.0" prefWidth="1024.0" AnchorPane.bottomAnchor="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.49090995788574" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0">
-               <image>
-                  <Image url="@Ikona%20FNS.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="927.0" layoutY="22.0" mnemonicParsing="false" onAction="#wyloguj" prefHeight="25.0" prefWidth="70.0" text="Wyloguj" AnchorPane.rightAnchor="26.599999999999994" AnchorPane.topAnchor="22.0" />
-            <Label layoutX="81.0" layoutY="10.0" prefHeight="48.0" prefWidth="272.0" text="FastNet Software (Beta v2)" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="10.0">
-               <font>
-                  <Font name="System Bold Italic" size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <TabPane layoutY="65.0" prefHeight="704.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
-        <tabs>
-            <Tab text="Finanse">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0">
-                     <children>
-                        <Label layoutX="20.0" layoutY="10.0" text="Wyszukaj pakiet :">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
-                        <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Szukaj">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <Label layoutX="350.0" layoutY="10.0" text="Umowa zawarta :">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <DatePicker layoutX="390.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" />
-                        <DatePicker layoutX="640.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" />
-                        <Label layoutX="350.0" layoutY="37.0" text="od :">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="600.0" layoutY="37.0" text="do :">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="854.0" layoutY="299.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <Separator layoutY="335.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                        <Label layoutX="500.0" layoutY="299.0" text="Wybrany pakiet :">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="640.0" layoutY="297.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
-                        <ScrollPane layoutX="20.0" layoutY="75.0" prefHeight="215.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="984.0">
-                                 <children>
-                                    <TableView prefHeight="215.2" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                 </children>
-                              </AnchorPane>
-                          </content>
-                        </ScrollPane>
-                        <Label layoutX="20.0" layoutY="342.0" text="Wyszukaj pracownika :">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="20.0" layoutY="367.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
-                        <Button layoutX="230.0" layoutY="369.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Szukaj">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <ScrollPane layoutX="20.0" layoutY="407.0" prefHeight="215.0" prefWidth="984.0">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="984.0">
-                                 <children>
-                                    <TableView prefHeight="215.2" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </ScrollPane>
-                        <Button layoutX="854.0" layoutY="631.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Button>
-                        <Label layoutX="465.0" layoutY="631.0" text="Wybrany pracownik :">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="640.0" layoutY="629.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
+      <Label layoutX="20.0" layoutY="10.0" text="Wyszukaj pakiet :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+      <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Szukaj">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="350.0" layoutY="10.0" text="Umowa zawarta :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="390.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" />
+      <DatePicker layoutX="640.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" />
+      <Label layoutX="350.0" layoutY="37.0" text="od :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="37.0" text="do :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="854.0" layoutY="299.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutY="335.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="500.0" layoutY="299.0" text="Wybrany pakiet :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="640.0" layoutY="297.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+      <ScrollPane layoutX="20.0" layoutY="75.0" prefHeight="215.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="984.0">
+               <children>
+                  <TableView prefHeight="215.2" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="20.0" layoutY="342.0" text="Wyszukaj pracownika :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="20.0" layoutY="367.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+      <Button layoutX="230.0" layoutY="369.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Szukaj">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="20.0" layoutY="407.0" prefHeight="215.0" prefWidth="984.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="984.0">
+               <children>
+                  <TableView prefHeight="215.2" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button layoutX="854.0" layoutY="631.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="465.0" layoutY="631.0" text="Wybrany pracownik :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="640.0" layoutY="629.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
    </children>
 </AnchorPane>

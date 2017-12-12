@@ -5,15 +5,15 @@
 <?import javafx.scene.text.*?>
 <AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="663.0" minWidth="1024.0" prefHeight="663.0"
             prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Projekt.Okienka.KlientKontroler">
+            >
     <children>
-        <Button layoutX="824.0" layoutY="614.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUsera"
+        <Button layoutX="824.0" layoutY="614.0" mnemonicParsing="false"
                 prefHeight="34.0" prefWidth="179.0" text="Usuń klienta">
             <font>
                 <Font name="System Bold" size="12.0"/>
             </font>
         </Button>
-        <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#pokazKlient" prefHeight="25.0"
+        <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0"
                 prefWidth="130.0" text="Pokaż wszystkich">
             <font>
                 <Font name="System Bold" size="12.0"/>
@@ -36,13 +36,13 @@
                 <TableColumn fx:id="nrtelefonuColumn" minWidth="0.0" prefWidth="193.0" text="Nr Telefonu"/>
             </columns>
         </TableView>
-        <Button layoutX="629.0" layoutY="614.0" mnemonicParsing="false" onAction="#openEdycjaModyfikacjaUsera"
+        <Button layoutX="629.0" layoutY="614.0" mnemonicParsing="false"
                 prefHeight="34.0" prefWidth="179.0" text="Modyfikuj klienta">
             <font>
                 <Font name="System Bold" size="12.0"/>
             </font>
         </Button>
-        <Button layoutX="439.0" layoutY="614.0" mnemonicParsing="false" onAction="#openEdycjaDodawanieUsera"
+        <Button layoutX="439.0" layoutY="614.0" mnemonicParsing="false"
                 prefHeight="34.0" prefWidth="179.0" text="Dodaj klienta">
             <font>
                 <Font name="System Bold" size="12.0"/>
@@ -50,7 +50,7 @@
         </Button>
         <TextField fx:id="poleszukania" layoutX="690.0" layoutY="40.0" prefHeight="25.0" prefWidth="192.0"
                    promptText="Wyszukaj..."/>
-        <Button layoutX="898.0" layoutY="40.0" mnemonicParsing="false" onAction="#szukajKlienta" prefHeight="25.0"
+        <Button layoutX="898.0" layoutY="40.0" mnemonicParsing="false"  prefHeight="25.0"
                 prefWidth="105.0" text="Szukaj"/>
         <Label layoutX="690.0" layoutY="10.0" prefHeight="26.0" prefWidth="116.0" text="Wyszukiwanie:">
             <font>

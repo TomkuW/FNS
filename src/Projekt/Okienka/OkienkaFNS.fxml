@@ -15,7 +15,7 @@
             <children>
                 <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.49090995788574" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0">
                     <image>
-                        <Image url="@Ikona%20FNS.png" />
+                        <Image url="@Ikona%20FNS.png"/>
                     </image>
                 </ImageView>
                 <Button layoutX="927.0" layoutY="22.0" mnemonicParsing="false" onAction="#wyloguj" prefHeight="25.0" prefWidth="70.0" text="Wyloguj" AnchorPane.rightAnchor="26.599999999999994" AnchorPane.topAnchor="22.0" />
