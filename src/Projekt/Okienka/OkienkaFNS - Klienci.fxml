@@ -1,51 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="663.0" minWidth="1024.0" prefHeight="663.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.KlientKontroler">
-   <children>
-      <Button layoutX="825.0" layoutY="581.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUsera" prefHeight="34.0" prefWidth="179.0" text="Usuń klienta">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="83.0" layoutY="100.0" mnemonicParsing="false" onAction="#pokazKlient" prefHeight="25.0" prefWidth="130.0" text="Pokaż wszystkich">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Label layoutX="21.0" layoutY="104.0" text="Klienci:" />
-      <Separator layoutY="28.0" prefHeight="43.0" prefWidth="1024.0" />
-      <TableView fx:id="klientTable" layoutX="21.0" layoutY="143.0" prefHeight="402.0" prefWidth="983.0">
-         <columns>
-            <TableColumn fx:id="imieColumn" minWidth="92.0" prefWidth="111.0" text="Imię" />
-            <TableColumn fx:id="nazwiskoColumn" minWidth="111.0" prefWidth="111.0" text="Nazwisko" />
-            <TableColumn fx:id="peselColumn" minWidth="105.0" prefWidth="105.0" text="PESEL" />
-            <TableColumn fx:id="miejscowoscColumn" minWidth="120.0" prefWidth="168.0" text="Miejscowość" />
-            <TableColumn fx:id="ulicaColumn" minWidth="109.0" prefWidth="194.0" text="Ulica" />
-            <TableColumn fx:id="nrdomColumn" minWidth="51.0" prefWidth="100.0" text="Nr Domu" />
-            <TableColumn fx:id="nrtelefonuColumn" minWidth="0.0" prefWidth="193.0" text="Nr Telefonu" />
-         </columns>
-      </TableView>
-      <Button layoutX="630.0" layoutY="581.0" mnemonicParsing="false" onAction="#openEdycjaModyfikacjaUsera" prefHeight="34.0" prefWidth="179.0" text="Modyfikuj klienta">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="435.0" layoutY="581.0" mnemonicParsing="false" onAction="#openEdycjaDodawanieUsera" prefHeight="34.0" prefWidth="179.0" text="Dodaj klienta">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <TextField fx:id="poleszukania" layoutX="686.0" layoutY="100.0" prefHeight="25.0" prefWidth="192.0" promptText="Wyszukaj..." />
-      <Button layoutX="899.0" layoutY="100.0" mnemonicParsing="false" onAction="#szukajKlienta" prefHeight="25.0" prefWidth="105.0" text="Szukaj" />
-      <Label layoutX="686.0" layoutY="75.0" prefHeight="17.0" prefWidth="207.0" text="Wyszukiwanie:" />
-   </children>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="663.0" minWidth="1024.0" prefHeight="663.0"
+            prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Projekt.Okienka.KlientKontroler">
+    <children>
+        <Button layoutX="824.0" layoutY="614.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUsera"
+                prefHeight="34.0" prefWidth="179.0" text="Usuń klienta">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#pokazKlient" prefHeight="25.0"
+                prefWidth="130.0" text="Pokaż wszystkich">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Label layoutX="20.0" layoutY="10.0" text="Klienci:">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="klientTable" layoutX="20.0" layoutY="80.0" prefHeight="520.0" prefWidth="984.0"
+                   AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <columns>
+                <TableColumn fx:id="imieColumn" minWidth="92.0" prefWidth="111.0" text="Imię"/>
+                <TableColumn fx:id="nazwiskoColumn" minWidth="111.0" prefWidth="111.0" text="Nazwisko"/>
+                <TableColumn fx:id="peselColumn" minWidth="105.0" prefWidth="105.0" text="PESEL"/>
+                <TableColumn fx:id="miejscowoscColumn" minWidth="120.0" prefWidth="168.0" text="Miejscowość"/>
+                <TableColumn fx:id="ulicaColumn" minWidth="109.0" prefWidth="194.0" text="Ulica"/>
+                <TableColumn fx:id="nrdomColumn" minWidth="51.0" prefWidth="100.0" text="Nr Domu"/>
+                <TableColumn fx:id="nrtelefonuColumn" minWidth="0.0" prefWidth="193.0" text="Nr Telefonu"/>
+            </columns>
+        </TableView>
+        <Button layoutX="629.0" layoutY="614.0" mnemonicParsing="false" onAction="#openEdycjaModyfikacjaUsera"
+                prefHeight="34.0" prefWidth="179.0" text="Modyfikuj klienta">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Button layoutX="439.0" layoutY="614.0" mnemonicParsing="false" onAction="#openEdycjaDodawanieUsera"
+                prefHeight="34.0" prefWidth="179.0" text="Dodaj klienta">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="poleszukania" layoutX="690.0" layoutY="40.0" prefHeight="25.0" prefWidth="192.0"
+                   promptText="Wyszukaj..."/>
+        <Button layoutX="898.0" layoutY="40.0" mnemonicParsing="false" onAction="#szukajKlienta" prefHeight="25.0"
+                prefWidth="105.0" text="Szukaj"/>
+        <Label layoutX="690.0" layoutY="10.0" prefHeight="26.0" prefWidth="116.0" text="Wyszukiwanie:">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+    </children>
 </AnchorPane>
