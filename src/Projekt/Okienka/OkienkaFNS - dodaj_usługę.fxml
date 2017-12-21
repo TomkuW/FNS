@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="262.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.DodajUslugeKontroler">
     <children>
 
-        <Label layoutX="18.0" layoutY="23.0" text="Dodaj pakiet :">
+        <Label layoutX="20.0" layoutY="19.0" text="Dodaj pakiet :">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
