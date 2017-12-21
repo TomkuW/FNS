@@ -1,5 +1,6 @@
 package Projekt.Okienka;
 
+import Projekt.ConntectToDB;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -11,7 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Created by Fabian on 2017-12-15.
+ * Created by Fabian on 2017-12-20.
  */
 public class DodajUslugeKontroler {
 
