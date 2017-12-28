@@ -21,8 +21,8 @@ CREATE TABLE klienci (
   `nazwa` varchar(80) NOT NULL,
   `technologia` varchar(10) NOT NULL,
   `predkosc` varchar(45) NOT NULL,
-  `cena` varchar(8) NOT NULL,
-  `okres` varchar(6) NOT NULL,
+  `cena` float(8) NOT NULL,
+  `okres` int(6) NOT NULL,
   PRIMARY KEY (`pakiet_id`)
   )
   ENGINE = InnoDB;
@@ -39,7 +39,7 @@ CREATE TABLE pracownicy (
   `miejscowosc` varchar(65),
   `email` varchar(45),
   `nr_telefon` varchar(15),
-  `wynagrodzenie` varchar(45),
+  `wynagrodzenie` float(20),
   `login` varchar(45) NOT NULL,
   `data_zatrudnienia` date,
   `haslo` varchar(120) DEFAULT NULL,
@@ -126,19 +126,19 @@ VALUES ( null,'Biznes NET','FTTH','60Mbit/s/2Mbit/s','80.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
 VALUES ( null,'SUPER TANI NET','ADSL2+','6Mbit/s/512Kbit/s','30.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
-VALUES ( null,'TANI NET','FTTH','20Mbit/s/2Mbit/s','40.33','24');
+VALUES ( null,'DOBRY NET','FTTH','20Mbit/s/2Mbit/s','40.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
-VALUES ( null,'SUPER TANI NET','ADSL2+','6Mbit/s/512Mbit/s','30.33','24');
+VALUES ( null,'EKSTRA TANI NET','ADSL2+','6Mbit/s/512Mbit/s','30.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
-VALUES ( null,'BIZNES NET','FTTH','60Mbit/s/2Mbit/s','80.33','24');
+VALUES ( null,'SMART NET','FTTH','60Mbit/s/2Mbit/s','80.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
-VALUES ( null,'BIZNES NET','ADSL2+','15Mbit/s/512Kbit/s','70.65','24');
+VALUES ( null,'NEW HOME NET','ADSL2+','15Mbit/s/512Kbit/s','70.65','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
 VALUES ( null,'STANDARD NET','ADSL2+','10Mbit/s/512Kbit/s','45.45','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
-VALUES ( null,'SUPER TANI NET','ADSL2+','6Mbit/s/512Kbit/s','30.33','24');
+VALUES ( null,'LIKE NET','ADSL2+','6Mbit/s/512Kbit/s','30.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
-VALUES ( null,'TANI NET','FTTH','20Mbit/s/2Mbit/s','40.33','24');
+VALUES ( null,'COSMO NET','FTTH','20Mbit/s/2Mbit/s','40.33','24');
 
 
   
