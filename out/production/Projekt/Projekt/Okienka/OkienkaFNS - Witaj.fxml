@@ -6,16 +6,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.WitajWylogujControler">
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryKlienta.WitajKontroler">
    <children>
       <ImageView fitHeight="470.0" fitWidth="522.0" layoutX="464.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo%20Firmy%20FNS.png" />
          </image>
       </ImageView>
-      <Label layoutX="37.0" layoutY="178.0" prefHeight="67.0" prefWidth="426.0" text="Witaj w programie !">
+      <Label layoutX="64.0" layoutY="39.0" prefHeight="67.0" prefWidth="426.0" text="Witaj w systemie !">
          <font>
-            <Font name="System Bold Italic" size="30.0" />
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="375.0" text="Zalogowany jako:" />
+      <Label layoutX="64.0" layoutY="405.0" text="Status bazy danych:" />
+      <Label fx:id="zalogowanyjako" layoutX="194.0" layoutY="375.0" prefHeight="18.0" prefWidth="104.0" text="&lt;login&gt;" />
+      <Label fx:id="isconn" layoutX="194.0" layoutY="405.0" prefHeight="18.0" prefWidth="127.0" text="&lt;status_połączenia&gt;" />
+      <Label layoutX="64.0" layoutY="434.0" text="Uprawnienia:" />
+      <Label fx:id="uprawnienia" layoutX="194.0" layoutY="434.0" prefHeight="18.0" prefWidth="119.0" text="&lt;typ_pracownika&gt;" />
+      <Label fx:id="imieNazwisko" layoutX="156.0" layoutY="307.0" prefHeight="18.0" prefWidth="138.0" text="&lt;imie &amp; nazwisko&gt;" />
+      <ImageView fitHeight="67.0" fitWidth="66.0" layoutX="64.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="223.0" prefHeight="45.0" prefWidth="160.0" text="Dane o użytkowniku:">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
    </children>

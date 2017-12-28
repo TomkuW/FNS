@@ -1,110 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.UslugaKontroler">
    <children>
-      <Label layoutX="20.0" layoutY="390.0" text="Dodaj pakiet:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="390.0">
+      <Button layoutX="240.0" layoutY="47.0" mnemonicParsing="false" onAction="#szukajUsluga" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="uslugaTable" layoutX="27.0" layoutY="86.0" prefHeight="255.0" prefWidth="968.0">
+         <columns>
+            <TableColumn fx:id="nazwaColumn" minWidth="150.0" prefWidth="250.0" text="Nazwa" />
+            <TableColumn fx:id="technologiaColumn" minWidth="0.0" prefWidth="180.0" text="Technologia" />
+            <TableColumn fx:id="predkoscColumn" minWidth="150.0" prefWidth="216.0" text="Prędkość" />
+            <TableColumn fx:id="cenaColumn" minWidth="67.0" prefWidth="172.0" text="Cena" />
+            <TableColumn fx:id="okresColumn" minWidth="100.0" prefWidth="149.0" text="Okres" />
+         </columns>
+      </TableView>
+      <Button layoutX="870.0" layoutY="351.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUslug" prefHeight="25.0" prefWidth="125.0" text="Usuń">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="30.0" layoutY="20.0" text="Szukaj pakiet:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="430.0" text="Nazwa:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="510.0" text="Prędkość:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="470.0" text="Technologia:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="590.0" text="Cena:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <TextField layoutX="200.0" layoutY="430.0" prefHeight="25.0" prefWidth="150.0" promptText="Nazwa pakietu" />
-      <ComboBox layoutX="200.0" layoutY="590.0" prefWidth="150.0" />
-      <Button layoutX="928.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Dodaj">
+      <TextField fx:id="poleszukania" layoutX="30.0" layoutY="45.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" />
+      <Button layoutX="372.0" layoutY="48.0" mnemonicParsing="false" onAction="#pokazUsluga" prefHeight="25.0" prefWidth="150.0" text="Pokaz Wszystkie">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="40.0" layoutY="630.0" text="Okres umowy [mc]:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="927.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <ScrollPane layoutX="30.0" layoutY="155.0" prefHeight="240.0" prefWidth="984.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
-         <content>
-            <TableView prefHeight="255.0" prefWidth="968.0">
-               <columns>
-                  <TableColumn minWidth="150.0" prefWidth="150.0" text="Nazwa" />
-                  <TableColumn minWidth="100.0" prefWidth="100.0" text="Technologia" />
-                  <TableColumn minWidth="150.0" prefWidth="150.0" text="Prędkość" />
-                  <TableColumn minWidth="100.0" prefWidth="100.0" text="Cena" />
-                  <TableColumn minWidth="100.0" prefWidth="100.0" text="Okres" />
-               </columns>
-            </TableView>
-         </content>
-      </ScrollPane>
-      <Button layoutX="837.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Modyfikuj">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="928.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Usuń" AnchorPane.bottomAnchor="308.0" AnchorPane.rightAnchor="20.799999999999997">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Label layoutX="717.0" layoutY="10.0" text="Szukaj pakiet:">
+      <Label layoutX="43.0" layoutY="388.0" text="Dodaj pakiet:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="717.0" layoutY="37.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" AnchorPane.leftAnchor="717.0" AnchorPane.topAnchor="37.0" />
-      <Separator layoutX="1.0" layoutY="353.0" prefHeight="43.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="355.0" />
-      <RadioButton layoutX="200.0" layoutY="474.0" mnemonicParsing="false" text="FTTH" />
-      <RadioButton layoutX="260.0" layoutY="474.0" mnemonicParsing="false" text="ADSL2+" />
-      <RadioButton layoutX="350.0" layoutY="554.0" mnemonicParsing="false" text="10 Mbit/s - 512 kbit/s " />
-      <RadioButton layoutX="200.0" layoutY="554.0" mnemonicParsing="false" text="6 Mbit/s - 512 kbit/s" />
-      <RadioButton layoutX="200.0" layoutY="514.0" mnemonicParsing="false" text="20 Mbit/s - 2Mbit/s" />
-      <RadioButton layoutX="500.0" layoutY="514.0" mnemonicParsing="false" text="60 Mbit/s - 2Mbit/s" />
-      <RadioButton layoutX="350.0" layoutY="514.0" mnemonicParsing="false" text="40 Mbit/s - 2Mbit/s" />
-      <RadioButton layoutX="500.0" layoutY="554.0" mnemonicParsing="false" text="15 Mbit/s - 512 kbit/s" />
-      <RadioButton layoutX="200.0" layoutY="634.0" mnemonicParsing="false" text="12" />
-      <RadioButton layoutX="260.0" layoutY="634.0" mnemonicParsing="false" text="24" />
-      <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Pokaż wszystkich">
+      <Label layoutX="63.0" layoutY="428.0" text="Nazwa:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="508.0" text="Prędkość:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="468.0" text="Technologia:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="644.0" layoutY="424.0" text="Cena:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nazwa_usluga" layoutX="177.0" layoutY="428.0" prefHeight="25.0" prefWidth="150.0" promptText="Nazwa pakietu" />
+      <Button fx:id="dodaj" layoutX="702.0" layoutY="517.0" mnemonicParsing="false" onAction="#dodawanie" prefHeight="25.0" prefWidth="139.0" text="Dodaj">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="20.0" layoutY="10.0" text="Pakiety:">
+      <Label layoutX="644.0" layoutY="468.0" text="Okres umowy [mc]:">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font size="16.0" />
          </font>
       </Label>
+      <RadioButton fx:id="technologia_usluga1" layoutX="177.0" layoutY="472.0" mnemonicParsing="false" text="FTTH">
+         <toggleGroup>
+            <ToggleGroup fx:id="Group2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="technologia_usluga2" layoutX="237.0" layoutY="472.0" mnemonicParsing="false" text="ADSL2+" toggleGroup="$Group2" />
+      <RadioButton fx:id="predkosc_usluga5" layoutX="327.0" layoutY="552.0" mnemonicParsing="false" text="10 Mbit/s - 512 kbit/s ">
+         <toggleGroup>
+            <ToggleGroup fx:id="Group1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="predkosc_usluga4" layoutX="177.0" layoutY="552.0" mnemonicParsing="false" text="6 Mbit/s - 512 kbit/s" toggleGroup="$Group1" />
+      <RadioButton fx:id="predkosc_usluga1" layoutX="177.0" layoutY="512.0" mnemonicParsing="false" text="20 Mbit/s - 2Mbit/s" toggleGroup="$Group1" />
+      <RadioButton fx:id="predkosc_usluga3" layoutX="477.0" layoutY="512.0" mnemonicParsing="false" text="60 Mbit/s - 2Mbit/s" toggleGroup="$Group1" />
+      <RadioButton fx:id="predkosc_usluga2" layoutX="327.0" layoutY="512.0" mnemonicParsing="false" text="40 Mbit/s - 2Mbit/s" toggleGroup="$Group1" />
+      <RadioButton fx:id="predkosc_usluga6" layoutX="477.0" layoutY="552.0" mnemonicParsing="false" text="15 Mbit/s - 512 kbit/s" toggleGroup="$Group1" />
+      <TextField fx:id="cena_usluga" layoutX="702.0" layoutY="424.0" prefHeight="25.0" prefWidth="150.0" promptText="nowa cena" />
+      <RadioButton fx:id="okres_usluga1" layoutX="805.0" layoutY="472.0" mnemonicParsing="false" text="12">
+         <toggleGroup>
+            <ToggleGroup fx:id="Group3" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="okres_usluga2" layoutX="865.0" layoutY="472.0" mnemonicParsing="false" text="24">
+         <toggleGroup>
+            <ToggleGroup fx:id="Group3" />
+         </toggleGroup>
+      </RadioButton>
    </children>
 </AnchorPane>
