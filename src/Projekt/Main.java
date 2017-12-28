@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-
 /**
  * Created by Tomek on 2017-10-18.
  *
@@ -21,7 +20,7 @@ public class Main extends Application {
         //obiekt umożliwajacy zaladowanie pliku fxml
         //(OknoModulow.class.getResource("Logowanie do systemu.fxml") - pozwala odnieśc się do lokalizacji pliku
         // fxml, lokalizacja jego jest ta sama co naszej klasy OknoModolow
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Okienka/Logowanie.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("KontroleryLogowania/Logowanie.fxml"));
         //laduje plik fxml i przypisuje do obiektu typu Parent który moze przyjmować wartości tj. kontenery np
         // .BorderPane
 
@@ -32,7 +31,6 @@ public class Main extends Application {
         primaryStage.setTitle("FNS");
         primaryStage.setScene(scene);
         primaryStage.show();
-
 
 
     }
