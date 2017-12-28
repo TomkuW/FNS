@@ -1,6 +1,6 @@
 package Projekt.Okienka;
 
-import Projekt.ConntectToDB;
+import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,13 +10,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Created by Tomek on 2017-12-20.
+ * Created by Tomek on 2017-11-23.
  */
-public class KlientDAO {
+public class UslugaDAO {
 
-    public static ObservableList<Klient> pokazKlient() throws SQLException, ClassNotFoundException {
 
-        String selectStmt = "SELECT * FROM klienci";
+    public static ObservableList<Usluga> pokazUsluga() throws SQLException, ClassNotFoundException {
+
+        String selectStmt = "SELECT * FROM pakiety";
 
         try {
 
@@ -26,10 +27,10 @@ public class KlientDAO {
             ResultSet rs = preparedStatement.executeQuery(selectStmt);
 
             //Send ResultSet to the getContractorList method and get Contractor object
-            ObservableList<Klient> KlientList = getKlientList(rs);
+            ObservableList<Usluga> UslugaList = getUslugaList(rs);
             System.out.print(rs.next());
             //Return Contractor object
-            return KlientList;
+            return UslugaList;
         } catch (Exception e) {
             System.out.println("SQL select operation has been failed: " + e);
             //Return exception
@@ -39,18 +40,14 @@ public class KlientDAO {
 
     }
 
-    //-----
-    public static ObservableList<Klient> wyszukajKlient (String wyrazenie) throws SQLException,
+    public static ObservableList<Usluga> wyszukajUsluga (String wyrazenie) throws SQLException,
             ClassNotFoundException {
         //Declare a SELECT statement
-        String selectStmt = "SELECT DISTINCT * FROM klienci WHERE imie LIKE \"%" + wyrazenie + "%\" OR "
-                + "nazwisko =\""+wyrazenie + "\" OR "
-                + "PESEL =\""+ wyrazenie+ "\" OR "
-                + "miejscowosc LIKE \"%" + wyrazenie +"%\" OR "
-                + "ulica LIKE \"%"+ wyrazenie +"%\" OR "
-                + "nr_dom LIKE \"%"+ wyrazenie + "%\" OR "
-                + "nr_telefon LIKE \"%"+ wyrazenie + "%\" "
-                + "GROUP BY imie ";
+        String selectStmt = "SELECT * FROM pakiety WHERE nazwa LIKE \"%" + wyrazenie + "%\" OR "
+                + "technologia =\""+wyrazenie + "\" OR "
+                + "predkosc =\""+ wyrazenie+ "\" OR "
+                + "cena = \"%" + wyrazenie +"%\" OR "
+                + "okres = \"%"+ wyrazenie +"%\"";
 
 
 
@@ -62,76 +59,53 @@ public class KlientDAO {
             ResultSet rs = preparedStatement.executeQuery(selectStmt);
 
             //Send ResultSet to the getCargoList method and get Cargo object
-            ObservableList<Klient> KlientList = getKlientList(rs);
+            ObservableList<Usluga> UslugaList = getUslugaList(rs);
 
             //Return Cargo object
-            return KlientList;
+            return UslugaList;
         } catch (SQLException e) {
             System.out.println("SQL select operation has been failed: " + e);
             //Return exception
             throw e;
         }
     }
-    //
+    private static ObservableList<Usluga> getUslugaList(ResultSet rs) throws SQLException, ClassNotFoundException {
 
-    /**
-     * Method to returning list of object from raw ResultSet
-     *
-     * @param rs - ResultSet from database
-     * @return - List of user objects
-     * @throws SQLException           - Throws when occurs problem with SQL query
-     * @throws ClassNotFoundException - Throws when occurs problem with using
-     *                                another class
-     */
-    private static ObservableList<Klient> getKlientList(ResultSet rs) throws SQLException, ClassNotFoundException {
-
-        ObservableList<Klient> klientList = FXCollections.observableArrayList();
+        ObservableList<Usluga> uslugaList = FXCollections.observableArrayList();
 
         while (rs.next()) {
-            Klient klient = new Klient();
-            klient.setKlient_id(rs.getInt("klient_id"));
-            klient.setImie(rs.getString("Imie"));
-            klient.setNazwisko(rs.getString("nazwisko"));
-            klient.setPESEL(rs.getString("PESEL"));
-            klient.setMiejscowosc(rs.getString("miejscowosc"));
-            klient.setUlica(rs.getString("ulica"));
-            klient.setNr_dom(rs.getString("nr_dom"));
-            klient.setNr_telefon(rs.getString("nr_telefon"));
+            Usluga usluga = new Usluga();
+            usluga.setPakiet_id(rs.getInt("pakiet_id"));
+            usluga.setNazwa(rs.getString("nazwa"));
+            usluga.setTechnologia(rs.getString("technologia"));
+           usluga.setPredkosc(rs.getString("predkosc"));
+            usluga.setCena(rs.getDouble("cena"));
+           usluga.setOkres(rs.getInt("okres"));
+
             //Add Cargo to the ObservableList
-            klientList.add(klient);
+            uslugaList.add(usluga);
         }
         //return crgList (ObservableList of Contractors)
-        return klientList;
+        return uslugaList;
     }
-
-    /**
-     * Method to update user information in database
-     *
-     * @throws SQLException           - Throw when occurs problem with SQL query
-     * @throws ClassNotFoundException - Throws when occurs problem with using
-     *                                another class
-     */
-    public static void updateKlient( int klient_id, String imie, String nazwisko, String PESEL, String
-            miejscowosc, String ulica, String nr_dom, String nr_telefon) throws
+    public static void updateUsluga( int pakiet_id, String nazwa, String technologia, String predkosc, String
+            cena, String okres) throws
             SQLException, ClassNotFoundException {
 
 
-        String sql="UPDATE klienci set imie=?, nazwisko=?, PESEL=?,  miejscowosc=?,  ulica=?, " +
-                "nr_dom=?, nr_telefon=? WHERE klient_id=?";
+        String sql="UPDATE pakiety set nazwa=?, technologia=?, predkosc=?,  cena=?,  okres=? WHERE pakiet_id=?";
 
 
         try {
             Connection conn = ConntectToDB.Connector();
             PreparedStatement prepStmt = null;
             prepStmt = conn.prepareStatement(sql);
-            prepStmt.setString(1, imie);
-            prepStmt.setString(2, nazwisko);
-            prepStmt.setString(3, PESEL);
-            prepStmt.setString(4, miejscowosc);
-            prepStmt.setString(5, ulica);
-            prepStmt.setString(6, nr_dom);
-            prepStmt.setString(7, nr_telefon);
-            prepStmt.setInt(8,klient_id);
+            prepStmt.setString(1, nazwa);
+            prepStmt.setString(2, technologia);
+            prepStmt.setString(3, predkosc);
+            prepStmt.setString(4, cena);
+            prepStmt.setString(5,okres);
+            prepStmt.setInt(6, pakiet_id);
 
             prepStmt.executeUpdate();
             prepStmt.close();
@@ -143,21 +117,14 @@ public class KlientDAO {
         }
 
     }
+    public static void deleteUslugaWithId(int pakiet_id) throws SQLException {
 
-    /**
-     * Method to delete user from database
-     *
-     * @param klient_id - ID of user to delete
-     * @throws SQLException - Throws when occurs problem with SQL query
-     */
-    public static void deleteUserWithId(int klient_id) throws SQLException {
-
-        String sql = "DELETE FROM klienci WHERE klient_id = ?";
+        String sql = "DELETE FROM pakiety WHERE pakiet_id = ?";
         Connection conn = ConntectToDB.Connector();
         try {
 
             PreparedStatement prepStmt = conn.prepareStatement(sql);
-            prepStmt.setInt(1, klient_id);
+            prepStmt.setInt(1, pakiet_id);
             prepStmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -166,23 +133,14 @@ public class KlientDAO {
         }
 
     }
+    public static ResultSet wyswietlDaneUsluga(int pakiet_id) throws SQLException {
 
-    /**
-     * Method to getting data about concrete user
-     *
-     * @param klient_id - ID of user to getting data
-     * @return - ResultSet with information about user
-     * @throws SQLException - Throws when occurs problem with SQL query
-     */
-
-    public static ResultSet wyswietlDaneKlient(int klient_id) throws SQLException {
-
-        String query = "SELECT * FROM klienci WHERE klient_id= ?";
+        String query = "SELECT * FROM pakiety WHERE pakiet_id= ?";
 
 
         Connection conn = ConntectToDB.Connector();
         PreparedStatement prepStmt = conn.prepareStatement(query);
-        prepStmt.setInt(1, klient_id);
+        prepStmt.setInt(1, pakiet_id);
         prepStmt.executeQuery();
 
         return prepStmt.executeQuery();

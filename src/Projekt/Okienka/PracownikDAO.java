@@ -1,5 +1,6 @@
 package Projekt.Okienka;
 
+import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -7,12 +8,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+
 
 /**
- * Created by Tomek on 2017-11-17.
+ * Created by Tomek on 2017-11-25.
  */
-
 public class PracownikDAO {
 
 
@@ -28,10 +28,10 @@ public class PracownikDAO {
             ResultSet rs = preparedStatement.executeQuery(selectStmt);
 
             //Send ResultSet to the getContractorList method and get Contractor object
-            ObservableList<Pracownik> Pracowniklist = getPracownikList(rs);
+            ObservableList<Pracownik> Pracownikist = getPracownikList(rs);
             System.out.print(rs.next());
             //Return Contractor object
-            return Pracowniklist;
+            return Pracownikist;
         } catch (Exception e) {
             System.out.println("SQL select operation has been failed: " + e);
             //Return exception
@@ -42,25 +42,29 @@ public class PracownikDAO {
     }
 
     //-----
-    public static ObservableList<Pracownik> wyszukajPracownik(String wyrazenie) throws SQLException,
+    public static ObservableList<Pracownik> wyszukajPracownik (String wyrazenie) throws SQLException,
             ClassNotFoundException {
         //Declare a SELECT statement
         String selectStmt = "SELECT * FROM pracownicy WHERE imie LIKE \"%" + wyrazenie + "%\" OR "
-                + "nazwisko LIKE\"%" + wyrazenie + "%\" OR "
-                + "zawod =\"%" + wyrazenie + "%\" OR "
-                + "PESEL =\"" + wyrazenie + "\" OR "
-                + "ulica =\"%" + wyrazenie + "%\" OR "
-                + "nr_domu =\"" + wyrazenie + "\" OR "
-                + "miejscowosc=\"%" + wyrazenie + "%\" OR "
-                + "email = \"" + wyrazenie + "\" OR "
-                + "nr_telefon =\"" + wyrazenie + "%\" OR "
-                + "wynagrodzenie = \"" + wyrazenie + "\"";
+                + "nazwisko LIKE\"%"+wyrazenie + "%\" OR "
+                + "zawod =\"%"+ wyrazenie+ "%\" OR "
+                + "PESEL =\""+ wyrazenie+ "\" OR "
+                + "ulica =\"%"+ wyrazenie+ "%\" OR "
+                + "nr_domu =\""+ wyrazenie+ "\" OR "
+                + "miejscowosc=\"%" + wyrazenie +"%\" OR "
+                + "email = \""+ wyrazenie +"\" OR "
+                + "nr_telefon =\""+ wyrazenie + "%\" OR "
+                + "wynagrodzenie = \""+ wyrazenie + "\"";
+
+
+
+
 
 
         //Execute SELECT statement
         try {
             Connection conn = ConntectToDB.Connector();
-            PreparedStatement preparedStatement = conn.prepareStatement(selectStmt);
+            PreparedStatement  preparedStatement = conn.prepareStatement(selectStmt);
             ResultSet rs = preparedStatement.executeQuery(selectStmt);
 
             //Send ResultSet to the getCargoList method and get Cargo object
@@ -85,7 +89,6 @@ public class PracownikDAO {
      * @throws ClassNotFoundException - Throws when occurs problem with using
      *                                another class
      */
-
     private static ObservableList<Pracownik> getPracownikList(ResultSet rs) throws SQLException,
             ClassNotFoundException {
 
@@ -94,20 +97,20 @@ public class PracownikDAO {
         while (rs.next()) {
             Pracownik pracownik = new Pracownik();
             pracownik.setPracownik_id(rs.getInt("pracownik_id"));
-            pracownik.setImie(rs.getString("Imie"));
+            pracownik.setImie(rs.getString("imie"));
             pracownik.setNazwisko(rs.getString("nazwisko"));
             pracownik.setZawod(rs.getString("zawod"));
             pracownik.setPESEL(rs.getString("PESEL"));
             pracownik.setUlica(rs.getString("ulica"));
-            pracownik.setNr_dom(rs.getString("nr_domu"));
+            pracownik.setNr_domu(rs.getString("nr_domu"));
             pracownik.setMiejscowosc(rs.getString("miejscowosc"));
             pracownik.setEmail(rs.getString("email"));
             pracownik.setNr_telefon(rs.getString("nr_telefon"));
-            pracownik.setWynagrodzenie(rs.getString("wynagrodzenie"));
+            pracownik.setWynagrodzenie(rs.getDouble("wynagrodzenie"));
             pracownik.setLogin(rs.getString("login"));
+            pracownik.setData_zatrudnienia(rs.getDate("data_zatrudnienia"));
             pracownik.setHaslo(rs.getString("haslo"));
             pracownik.setTyp_pracownika(rs.getString("typ_pracownika"));
-           // pracownik.setData_zatrudnienia(rs.getDate("data_zatrudnienia"));
             //Add Cargo to the ObservableList
             pracownikList.add(pracownik);
         }
@@ -116,14 +119,16 @@ public class PracownikDAO {
     }
 
 
-    public static void updatePracownik(int pracownik_id, String imie, String nazwisko, String zawod, String ulica,
-                                       String nr_dom, String miejscowosc, String email, String nr_telefon,
-                                       String wynagrodzenie, String login, String haslo, String typ_pracownika) throws
+    public static void updatePracownik(int pracownik_id, String imie, String nazwisko, String zawod,
+                                       String ulica, String nr_domu, String miejscowosc, String email, String
+                                                nr_telefon, String wynagrodzenie, String login,
+                                       String haslo, String typ_pracownika) throws
             SQLException, ClassNotFoundException {
 
 
-        String sql = "UPDATE pracownicy set imie=?, nazwisko=?, zawod=?, ulica=?, nr_domu=?, miejscowosc=?," +
-                "email=? , nr_telefon=? , wynagrodzenie=? , login=? , haslo=?, typ_pracownika=? WHERE pracownik_id=?";
+        String sql="UPDATE pracownicy set imie=?, nazwisko=?, zawod=?, ulica=?, nr_domu=?, miejscowosc=?,"+
+        "email=? , nr_telefon=? , wynagrodzenie=? , login=? , " +
+                " haslo=?,typ_pracownika=? WHERE pracownik_id=?";
 
 
         try {
@@ -132,25 +137,24 @@ public class PracownikDAO {
             prepStmt = conn.prepareStatement(sql);
             prepStmt.setString(1, imie);
             prepStmt.setString(2, nazwisko);
-            prepStmt.setString(3, zawod);
+            prepStmt.setString(3,zawod);
             prepStmt.setString(4, ulica);
-            prepStmt.setString(5, nr_dom);
+            prepStmt.setString(5, nr_domu);
             prepStmt.setString(6, miejscowosc);
             prepStmt.setString(7, email);
-            prepStmt.setString(8, nr_telefon);
-            prepStmt.setString(9, wynagrodzenie);
-            prepStmt.setString(10, login);
-            prepStmt.setString(11, haslo);
-            prepStmt.setString(12, typ_pracownika);
-            prepStmt.setInt(13, pracownik_id);
-
+            prepStmt.setString(8,nr_telefon);
+            prepStmt.setString(9,wynagrodzenie);
+            prepStmt.setString(10,login);
+            prepStmt.setString(11,haslo);
+            prepStmt.setString(12,typ_pracownika);
+            prepStmt.setInt(13,pracownik_id);
 
             prepStmt.executeUpdate();
             prepStmt.close();
             conn.close();
 
         } catch (SQLException e) {
-            System.err.println("Blad przy aktualizacji danych pracownika" + e);
+            System.err.println("Blad przy aktualizacji danych klienta" +e);
             throw e;
         }
 
@@ -187,7 +191,7 @@ public class PracownikDAO {
      * @throws SQLException - Throws when occurs problem with SQL query
      */
 
-    public static ResultSet wyswietlDanePracownika(int pracownik_id) throws SQLException {
+    public static ResultSet wyswietlDanePracownika( int pracownik_id) throws SQLException {
 
         String query = "SELECT * FROM pracownicy WHERE pracownik_id= ?";
 

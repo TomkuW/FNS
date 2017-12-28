@@ -4,10 +4,10 @@ import javafx.beans.property.*;
 
 import java.sql.Date;
 
-/**
- * Created by Kamil&Maciej  on 2017-12-18.
- */
 
+/**
+ * Created by Tomek on 2017-11-25.
+ */
 public class Pracownik {
 
     private IntegerProperty pracownik_id;
@@ -16,16 +16,17 @@ public class Pracownik {
     private StringProperty zawod;
     private StringProperty PESEL;
     private StringProperty ulica;
-    private StringProperty nr_dom;
+    private StringProperty nr_domu;
     private StringProperty miejscowosc;
     private StringProperty email;
     private StringProperty nr_telefon;
-    private StringProperty wynagrodzenie;
+    private DoubleProperty wynagrodzenie;
     private StringProperty login;
+    private SimpleObjectProperty<Date> data_zatrudnienia;
     private StringProperty haslo;
     private StringProperty typ_pracownika;
-    private SimpleObjectProperty<Date> data_zatrudnienia;
 
+    private DoubleProperty wynagrodzenieRoczne;
 
 
     public Pracownik() {
@@ -35,15 +36,19 @@ public class Pracownik {
         this.zawod = new SimpleStringProperty();
         this.PESEL = new SimpleStringProperty();
         this.ulica = new SimpleStringProperty();
-        this.nr_dom = new SimpleStringProperty();
+        this.nr_domu = new SimpleStringProperty();
         this.miejscowosc = new SimpleStringProperty();
         this.email = new SimpleStringProperty();
         this.nr_telefon = new SimpleStringProperty();
-        this.wynagrodzenie = new SimpleStringProperty();
+        this.wynagrodzenie = new SimpleDoubleProperty();
         this.login = new SimpleStringProperty();
+        this.data_zatrudnienia = new SimpleObjectProperty<>();
         this.haslo = new SimpleStringProperty();
         this.typ_pracownika = new SimpleStringProperty();
-        this.data_zatrudnienia = new SimpleObjectProperty<>();
+
+
+        this.wynagrodzenieRoczne = new SimpleDoubleProperty();
+
     }
 
     public int getPracownik_id() {
@@ -58,7 +63,6 @@ public class Pracownik {
         this.pracownik_id.set(pracownik_id);
     }
 
-
     public String getImie() {
         return imie.get();
     }
@@ -70,7 +74,6 @@ public class Pracownik {
     public void setImie(String imie) {
         this.imie.set(imie);
     }
-
 
     public String getNazwisko() {
         return nazwisko.get();
@@ -84,7 +87,6 @@ public class Pracownik {
         this.nazwisko.set(nazwisko);
     }
 
-
     public String getZawod() {
         return zawod.get();
     }
@@ -96,7 +98,6 @@ public class Pracownik {
     public void setZawod(String zawod) {
         this.zawod.set(zawod);
     }
-
 
     public String getPESEL() {
         return PESEL.get();
@@ -110,7 +111,6 @@ public class Pracownik {
         this.PESEL.set(PESEL);
     }
 
-
     public String getUlica() {
         return ulica.get();
     }
@@ -123,19 +123,17 @@ public class Pracownik {
         this.ulica.set(ulica);
     }
 
-
-    public String getNr_dom() {
-        return nr_dom.get();
+    public String getNr_domu() {
+        return nr_domu.get();
     }
 
-    public StringProperty nr_domProperty() {
-        return nr_dom;
+    public StringProperty nr_domuProperty() {
+        return nr_domu;
     }
 
-    public void setNr_dom(String nr_dom) {
-        this.nr_dom.set(nr_dom);
+    public void setNr_domu(String nr_domu) {
+        this.nr_domu.set(nr_domu);
     }
-
 
     public String getMiejscowosc() {
         return miejscowosc.get();
@@ -149,7 +147,6 @@ public class Pracownik {
         this.miejscowosc.set(miejscowosc);
     }
 
-
     public String getEmail() {
         return email.get();
     }
@@ -161,7 +158,6 @@ public class Pracownik {
     public void setEmail(String email) {
         this.email.set(email);
     }
-
 
     public String getNr_telefon() {
         return nr_telefon.get();
@@ -175,19 +171,17 @@ public class Pracownik {
         this.nr_telefon.set(nr_telefon);
     }
 
-
-    public String getWynagrodzenie() {
+    public Double getWynagrodzenie() {
         return wynagrodzenie.get();
     }
 
-    public StringProperty wynagrodzenieProperty() {
+    public DoubleProperty wynagrodzenieProperty() {
         return wynagrodzenie;
     }
 
-    public void setWynagrodzenie(String wynagrodzenie) {
+    public void setWynagrodzenie(double wynagrodzenie) {
         this.wynagrodzenie.set(wynagrodzenie);
     }
-
 
     public String getLogin() {
         return login.get();
@@ -201,6 +195,17 @@ public class Pracownik {
         this.login.set(login);
     }
 
+    public Date getData_zatrudnienia() {
+        return data_zatrudnienia.get();
+    }
+
+    public SimpleObjectProperty<Date> data_zatrudnieniaProperty() {
+        return data_zatrudnienia;
+    }
+
+    public void setData_zatrudnienia(Date data_zatrudnienia) {
+        this.data_zatrudnienia.set(data_zatrudnienia);
+    }
 
     public String getHaslo() {
         return haslo.get();
@@ -214,7 +219,6 @@ public class Pracownik {
         this.haslo.set(haslo);
     }
 
-
     public String getTyp_pracownika() {
         return typ_pracownika.get();
     }
@@ -227,16 +231,21 @@ public class Pracownik {
         this.typ_pracownika.set(typ_pracownika);
     }
 
-
-    public Date getData_zatrudnienia() {
-        return data_zatrudnienia.get();
+    public void setWynagrodzenie(int wynagrodzenie) {
+        this.wynagrodzenie.set(wynagrodzenie);
     }
 
-    public SimpleObjectProperty<Date> data_zatrudnieniaProperty() {
-        return data_zatrudnienia;
+    public Double getWynagrodzenieRoczne() {
+        return wynagrodzenieRoczne.get();
     }
 
-    public void setData_zatrudnienia(Date data_zatrudnienia) {
-        this.data_zatrudnienia.set(data_zatrudnienia);
+    public DoubleProperty wynagrodzenieRoczneProperty() {
+        return wynagrodzenieRoczne;
     }
+
+    public void setWynagrodzenieRoczne(double wynagrodzenieRoczne) {
+        this.wynagrodzenieRoczne.set(wynagrodzenieRoczne);
+    }
+
+
 }

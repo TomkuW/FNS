@@ -3,7 +3,7 @@ package Projekt.Okienka;
 import javafx.beans.property.*;
 
 /**
- * Created by Fabian on 2017-11-17.
+ * Created by Tomek on 2017-11-23.
  */
 public class Usluga {
 
@@ -11,18 +11,16 @@ public class Usluga {
     private StringProperty nazwa;
     private StringProperty technologia;
     private StringProperty predkosc;
-    private StringProperty cena;
-    private StringProperty okres;
-
+    private DoubleProperty cena;
+    private IntegerProperty okres;
 
     public Usluga() {
         this.pakiet_id = new SimpleIntegerProperty();
         this.nazwa = new SimpleStringProperty();
         this.technologia = new SimpleStringProperty();
         this.predkosc = new SimpleStringProperty();
-        this.cena = new SimpleStringProperty();
-        this.okres = new SimpleStringProperty();
-
+        this.cena = new SimpleDoubleProperty();
+        this.okres = new SimpleIntegerProperty();
     }
 
     public int getPakiet_id() {
@@ -73,28 +71,27 @@ public class Usluga {
         this.predkosc.set(predkosc);
     }
 
-    public String getCena() {
+    public double getCena() {
         return cena.get();
     }
 
-    public StringProperty cenaProperty() {
+    public DoubleProperty cenaProperty() {
         return cena;
     }
 
-    public void setCena(String cena) {
+    public void setCena(double cena) {
         this.cena.set(cena);
     }
 
-    public String getOkres() {
+    public int getOkres() {
         return okres.get();
     }
 
-    public StringProperty okresProperty() {
+    public IntegerProperty okresProperty() {
         return okres;
     }
 
-    public void setOkres(String okres) {
+    public void setOkres(int okres) {
         this.okres.set(okres);
     }
 }
-
