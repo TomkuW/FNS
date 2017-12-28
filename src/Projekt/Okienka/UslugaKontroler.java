@@ -1,5 +1,6 @@
 package Projekt.Okienka;
 
+import Projekt.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,7 +20,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
- * Created by Fabian on 2017-12-12.
+ * Created by Fabian on 2017-12-21.
  */
 
 
@@ -110,7 +111,7 @@ public class UslugaKontroler implements Initializable {
     @FXML
     public void openPotwierdzenieUsuwaniaUsera() throws Exception {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PotwierdzenieUsuwaniaUsluga.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkienkaFNS - Usun_usługę.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
