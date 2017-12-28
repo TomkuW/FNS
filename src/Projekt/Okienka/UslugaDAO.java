@@ -1,35 +1,35 @@
 package Projekt.Okienka;
 
+import Projekt.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import javax.swing.text.TabableView;
-import javax.swing.text.TableView;
-import java.sql.*;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
- * Created by Fabian on 2017-12-05.
+ * Created by Tomek on 2017-12-20.
  */
-public class UslugaDAO {
+public class KlientDAO {
 
+    public static ObservableList<Klient> pokazKlient() throws SQLException, ClassNotFoundException {
 
-    public static ObservableList<Usluga> pokazUsluga() throws SQLException, ClassNotFoundException {
-
-        String selectStmt = "SELECT * FROM pakiety";
+        String selectStmt = "SELECT * FROM klienci";
 
         try {
 
 
             Connection conn = ConntectToDB.Connector();
-            PreparedStatement  preparedStatement = conn.prepareStatement(selectStmt);
+            PreparedStatement preparedStatement = conn.prepareStatement(selectStmt);
             ResultSet rs = preparedStatement.executeQuery(selectStmt);
 
             //Send ResultSet to the getContractorList method and get Contractor object
-            ObservableList<Usluga> Uslugalist = getUslugaList(rs);
+            ObservableList<Klient> KlientList = getKlientList(rs);
             System.out.print(rs.next());
             //Return Contractor object
-            return Uslugalist;
+            return KlientList;
         } catch (Exception e) {
             System.out.println("SQL select operation has been failed: " + e);
             //Return exception
@@ -40,16 +40,17 @@ public class UslugaDAO {
     }
 
     //-----
-    public static ObservableList<Usluga> wyszukajUsluga (String wyrazenie) throws SQLException,
+    public static ObservableList<Klient> wyszukajKlient (String wyrazenie) throws SQLException,
             ClassNotFoundException {
         //Declare a SELECT statement
-        String selectStmt = "SELECT DISTINCT * FROM pakiety WHERE nazwa LIKE \"%" + wyrazenie + "%\" OR "
-                + "technologia =\""+ wyrazenie+ "\" OR "
-                + "predkosc =\"" + wyrazenie +"\" OR "
-                + "cena =\""+ wyrazenie +"\" OR "
-                + "okres =\""+ wyrazenie + "\" OR ";
-
-               // + "GROUP BY nazwa ";
+        String selectStmt = "SELECT DISTINCT * FROM klienci WHERE imie LIKE \"%" + wyrazenie + "%\" OR "
+                + "nazwisko =\""+wyrazenie + "\" OR "
+                + "PESEL =\""+ wyrazenie+ "\" OR "
+                + "miejscowosc LIKE \"%" + wyrazenie +"%\" OR "
+                + "ulica LIKE \"%"+ wyrazenie +"%\" OR "
+                + "nr_dom LIKE \"%"+ wyrazenie + "%\" OR "
+                + "nr_telefon LIKE \"%"+ wyrazenie + "%\" "
+                + "GROUP BY imie ";
 
 
 
@@ -61,10 +62,10 @@ public class UslugaDAO {
             ResultSet rs = preparedStatement.executeQuery(selectStmt);
 
             //Send ResultSet to the getCargoList method and get Cargo object
-            ObservableList<Usluga> UslugaList = getUslugaList(rs);
+            ObservableList<Klient> KlientList = getKlientList(rs);
 
             //Return Cargo object
-            return UslugaList;
+            return KlientList;
         } catch (SQLException e) {
             System.out.println("SQL select operation has been failed: " + e);
             //Return exception
@@ -82,23 +83,25 @@ public class UslugaDAO {
      * @throws ClassNotFoundException - Throws when occurs problem with using
      *                                another class
      */
-    private static ObservableList<Usluga> getUslugaList(ResultSet rs) throws SQLException, ClassNotFoundException {
+    private static ObservableList<Klient> getKlientList(ResultSet rs) throws SQLException, ClassNotFoundException {
 
-        ObservableList<Usluga> uslugaList = FXCollections.observableArrayList();
+        ObservableList<Klient> klientList = FXCollections.observableArrayList();
 
         while (rs.next()) {
-            Usluga usluga = new Usluga();
-            usluga.setPakiet_id(rs.getInt("pakiet_id"));
-            usluga.setNazwa(rs.getString("nazwa"));
-            usluga.setTechnologia(rs.getString("technologia"));
-            usluga.setPredkosc(rs.getString("predkosc"));
-            usluga.setCena(rs.getString("cena"));
-            usluga.setOkres(rs.getString("okres"));
+            Klient klient = new Klient();
+            klient.setKlient_id(rs.getInt("klient_id"));
+            klient.setImie(rs.getString("Imie"));
+            klient.setNazwisko(rs.getString("nazwisko"));
+            klient.setPESEL(rs.getString("PESEL"));
+            klient.setMiejscowosc(rs.getString("miejscowosc"));
+            klient.setUlica(rs.getString("ulica"));
+            klient.setNr_dom(rs.getString("nr_dom"));
+            klient.setNr_telefon(rs.getString("nr_telefon"));
             //Add Cargo to the ObservableList
-            uslugaList.add(usluga);
+            klientList.add(klient);
         }
         //return crgList (ObservableList of Contractors)
-        return uslugaList;
+        return klientList;
     }
 
     /**
@@ -108,31 +111,34 @@ public class UslugaDAO {
      * @throws ClassNotFoundException - Throws when occurs problem with using
      *                                another class
      */
-    public static void updateUsluga( int pakiet_id, String nazwa, String technologia, String predkosc, String
-            cena, String okres) throws
+    public static void updateKlient( int klient_id, String imie, String nazwisko, String PESEL, String
+            miejscowosc, String ulica, String nr_dom, String nr_telefon) throws
             SQLException, ClassNotFoundException {
 
 
-            String sql="UPDATE pakiety set nazwa=?, technologia=?, predkosc=?,  cena=?,  okres=? WHERE klient_id=?";
+        String sql="UPDATE klienci set imie=?, nazwisko=?, PESEL=?,  miejscowosc=?,  ulica=?, " +
+                "nr_dom=?, nr_telefon=? WHERE klient_id=?";
 
 
-            try {
-                Connection conn = ConntectToDB.Connector();
-                PreparedStatement prepStmt = null;
+        try {
+            Connection conn = ConntectToDB.Connector();
+            PreparedStatement prepStmt = null;
             prepStmt = conn.prepareStatement(sql);
-            prepStmt.setString(1, nazwa);
-            prepStmt.setString(2, technologia);
-            prepStmt.setString(3, predkosc);
-            prepStmt.setString(4, cena);
-            prepStmt.setString(5, okres);
-            prepStmt.setInt(6, pakiet_id);
+            prepStmt.setString(1, imie);
+            prepStmt.setString(2, nazwisko);
+            prepStmt.setString(3, PESEL);
+            prepStmt.setString(4, miejscowosc);
+            prepStmt.setString(5, ulica);
+            prepStmt.setString(6, nr_dom);
+            prepStmt.setString(7, nr_telefon);
+            prepStmt.setInt(8,klient_id);
 
             prepStmt.executeUpdate();
-                prepStmt.close();
-                conn.close();
+            prepStmt.close();
+            conn.close();
 
         } catch (SQLException e) {
-            System.err.println("Blad przy aktualizacji danych pakietu" +e);
+            System.err.println("Blad przy aktualizacji danych klienta" +e);
             throw e;
         }
 
@@ -141,21 +147,21 @@ public class UslugaDAO {
     /**
      * Method to delete user from database
      *
-     * @param pakiet_id - ID of user to delete
+     * @param klient_id - ID of user to delete
      * @throws SQLException - Throws when occurs problem with SQL query
      */
-    public static void deleteUserWithId(int pakiet_id) throws SQLException {
+    public static void deleteUserWithId(int klient_id) throws SQLException {
 
-        String sql = "DELETE FROM pakiety WHERE pakiet_id = ?";
+        String sql = "DELETE FROM klienci WHERE klient_id = ?";
         Connection conn = ConntectToDB.Connector();
         try {
 
             PreparedStatement prepStmt = conn.prepareStatement(sql);
-            prepStmt.setInt(1, pakiet_id);
+            prepStmt.setInt(1, klient_id);
             prepStmt.executeUpdate();
 
         } catch (SQLException e) {
-            System.out.print("Błąd podczas usuwania pakietu" + e);
+            System.out.print("Błąd podczas usuwania klienta" + e);
             throw e;
         }
 
@@ -164,24 +170,23 @@ public class UslugaDAO {
     /**
      * Method to getting data about concrete user
      *
-     * @param pakiet_id - ID of user to getting data
+     * @param klient_id - ID of user to getting data
      * @return - ResultSet with information about user
      * @throws SQLException - Throws when occurs problem with SQL query
      */
 
-    public static ResultSet wyswietlDaneUsluga(int pakiet_id) throws SQLException {
+    public static ResultSet wyswietlDaneKlient(int klient_id) throws SQLException {
 
-        String query = "SELECT * FROM pakiety WHERE pakiet_id= ?";
+        String query = "SELECT * FROM klienci WHERE klient_id= ?";
 
 
-            Connection conn = ConntectToDB.Connector();
-            PreparedStatement prepStmt = conn.prepareStatement(query);
-            prepStmt.setInt(1, pakiet_id);
-             prepStmt.executeQuery();
+        Connection conn = ConntectToDB.Connector();
+        PreparedStatement prepStmt = conn.prepareStatement(query);
+        prepStmt.setInt(1, klient_id);
+        prepStmt.executeQuery();
 
-            return prepStmt.executeQuery();
+        return prepStmt.executeQuery();
 
 
     }
-
 }

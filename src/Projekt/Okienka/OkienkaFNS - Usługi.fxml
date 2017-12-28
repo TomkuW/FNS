@@ -11,46 +11,46 @@
 
 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.UslugaKontroler">
    <children>
-      <Button layoutX="927.0" layoutY="39.0" mnemonicParsing="false" onAction="#szukajUsluga" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
+      <Button layoutX="919.0" layoutY="42.0" mnemonicParsing="false" onAction="#szukajUsluga" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ScrollPane layoutX="30.0" layoutY="155.0" prefHeight="474.0" prefWidth="932.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="90.0">
+      <ScrollPane layoutX="52.0" layoutY="91.0" prefHeight="489.0" prefWidth="857.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="91.0">
          <content>
-            <TableView fx:id="uslugaTable" prefHeight="472.0" prefWidth="931.0">
+            <TableView fx:id="uslugaTable" prefHeight="480.0" prefWidth="853.0">
                <columns>
-                  <TableColumn fx:id="nazwaColumn" minWidth="150.0" prefWidth="150.0" text="Nazwa" />
-                  <TableColumn fx:id="technologiaColumn" minWidth="100.0" prefWidth="100.0" text="Technologia" />
-                  <TableColumn fx:id="predkoscColumn" minWidth="150.0" prefWidth="150.0" text="Prędkość" />
-                  <TableColumn fx:id="cenaColumn" minWidth="100.0" prefWidth="100.0" text="Cena" />
-                  <TableColumn fx:id="okresColumn" minWidth="100.0" prefWidth="100.0" text="Okres" />
+                  <TableColumn fx:id="nazwaColumn" minWidth="150.0" prefWidth="170.0" text="Nazwa" />
+                  <TableColumn fx:id="technologiaColumn" minWidth="58.66667175292969" prefWidth="170.0" text="Technologia" />
+                  <TableColumn fx:id="predkoscColumn" minWidth="55.333343505859375" prefWidth="170.0" text="Prędkość" />
+                  <TableColumn fx:id="cenaColumn" minWidth="53.33331298828125" prefWidth="170.0" text="Cena" />
+                  <TableColumn fx:id="okresColumn" minWidth="0.0" prefWidth="170.0" text="Okres" />
                </columns>
             </TableView>
          </content>
       </ScrollPane>
-      <Button layoutX="902.0" layoutY="571.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUsera" prefHeight="25.0" prefWidth="75.0" text="Usuń" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="70.0">
+      <Button layoutX="832.0" layoutY="610.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaUsera" prefHeight="25.0" prefWidth="75.0" text="Usuń" AnchorPane.bottomAnchor="39.0" AnchorPane.rightAnchor="117.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="717.0" layoutY="10.0" text="Szukaj pakiet:">
+      <Label layoutX="706.0" layoutY="10.0" text="Szukaj pakiet:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="poleszukania" layoutX="717.0" layoutY="37.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" AnchorPane.leftAnchor="717.0" AnchorPane.topAnchor="37.0" />
-      <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#pokazUsluga" prefHeight="25.0" prefWidth="130.0" text="Pokaż wszystkich">
+      <TextField fx:id="poleszukania" layoutX="707.0" layoutY="39.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa pakietu" AnchorPane.leftAnchor="707.0" AnchorPane.topAnchor="39.0" />
+      <Button layoutX="54.0" layoutY="41.0" mnemonicParsing="false" onAction="#pokazUsluga" prefHeight="25.0" prefWidth="130.0" text="Pokaż wszystkie">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="20.0" layoutY="10.0" text="Pakiety:">
+      <Label layoutX="61.0" layoutY="10.0" text="Pakiety:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="806.0" layoutY="571.0" mnemonicParsing="false" onAction="#openEdycjaDodawanieUsera" prefHeight="25.0" prefWidth="75.0" text="Dodaj" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="170.0">
+      <Button layoutX="711.0" layoutY="610.0" mnemonicParsing="false" onAction="#openEdycjaDodawanieUsera" prefHeight="25.0" prefWidth="75.0" text="Dodaj" AnchorPane.bottomAnchor="39.0" AnchorPane.rightAnchor="238.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
