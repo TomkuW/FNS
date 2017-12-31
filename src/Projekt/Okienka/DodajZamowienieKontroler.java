@@ -2,6 +2,7 @@ package Projekt.Okienka;
 
 
 import Projekt.Modele.Klient;
+import Projekt.Modele.Usluga;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;

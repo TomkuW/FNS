@@ -28,7 +28,7 @@
             <TableColumn fx:id="status_col" prefWidth="147.0" text="Status" />
          </columns>
       </TableView>
-      <Label fx:id="informacja" layoutX="224.0" layoutY="67.0" prefHeight="25.0" prefWidth="295.0" text="&lt;tekst&gt;">
+      <Label fx:id="informacja" layoutX="32.0" layoutY="68.0" prefHeight="25.0" prefWidth="608.0" text="&lt;informacja o użytkowniku&gt;">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -43,10 +43,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="imieNazwisko" layoutX="32.0" layoutY="66.0" prefHeight="17.0" prefWidth="201.0" text="&lt;name&gt;">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font></Label>
       <Label fx:id="idwybranego" layoutX="191.0" layoutY="534.0" prefHeight="17.0" prefWidth="101.0" text="&lt;id zamowienia&gt;" />
       <Button layoutX="559.0" layoutY="18.0" mnemonicParsing="false" onAction="#pokazPraca" prefHeight="25.0" prefWidth="129.0" text="Odśwież">
          <font>

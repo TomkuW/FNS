@@ -1,6 +1,7 @@
 package Projekt.KontroleryKlienta;
 
 import Projekt.DAO.KlientDAO;
+import Projekt.Modele.Klient;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -98,9 +99,12 @@ public class ModyfikujKlientaKontroler implements Initializable {
     private void modykikujKlienta() throws SQLException, ClassNotFoundException {
         try {
 
+
+
                 KlientDAO.updateKlient(KlientKontroler.getSelectedKlientId(), imie_k.getText(), nazwisko_k.getText(),
                         pesel_k.getText(), miejscowosc_k.getText(), ulica_k.getText(), nr_dom_k.getText(),
                          telefon_k.getText());
+
 
 
             Stage stage = (Stage) modyfikuj.getScene().getWindow();

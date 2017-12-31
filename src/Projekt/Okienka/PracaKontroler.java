@@ -61,10 +61,6 @@ public class PracaKontroler implements Initializable {
     @FXML
     private Label idwybranego;
     @FXML
-    private  Label imieNazwisko;
-    @FXML
-    private  Label placa;
-    @FXML
     private Label informacja;
 
 
@@ -80,12 +76,24 @@ public class PracaKontroler implements Initializable {
     @FXML
     private void pokazPraca() throws SQLException, ClassNotFoundException {
         try {
-            //Get all Contractorsinformation
-            ObservableList<Zamowienie> ZamowienieData = PracaDAO.pokazPraca();
-            //Populate Contractors on TableView
-            miejsceWTabeliZamowienia(ZamowienieData);
 
 
+            if( ConntectToDB.getCurrentUser()[3].equals("Wykonawca")) {
+                //Get all Contractorsinformation
+                ObservableList<Zamowienie> ZamowienieData = PracaDAO.pokazPraca();
+                //Populate Contractors on TableView
+                miejsceWTabeliZamowienia(ZamowienieData);
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Jesteś zalogowany jako: " + ConntectToDB.getCurrentUser()[1] + " " + ConntectToDB.getCurrentUser()[2]);
+                alert.setContentText("Nie wykonujesz żadnych usług pracująć jako " + ConntectToDB.getCurrentUser()[3]);
+
+                alert.showAndWait();
+
+            }
         } catch (SQLException e) {
             System.out.println("Error occurred while getting Contractors information from DB.\n" + e);
             throw e;
@@ -141,17 +149,18 @@ public class PracaKontroler implements Initializable {
         });
         setValueLabel();
 
-        imieNazwisko.setText(ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser()[2]);
+      //  imieNazwisko.setText(ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser()[2]);
 
         czyPracownik();
 
     }
 
     public void czyPracownik(){
-        if( ConntectToDB.getCurrentUser()[3] == "Wykonawca"){
-            informacja.setText(" ma przypisane następujące usługi: ");
+        if( ConntectToDB.getCurrentUser()[3].equals("Wykonawca")){
+            informacja.setText((ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser
+                    ()[2]) + " ma przypisane następujące usługi: ");
         }else {
-            informacja.setText(" nie jest pracownikiem/wykonwacą!");
+            informacja.setText((ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser()[2])+ " nie jest pracownikiem/wykonwacą!");
         }
     }
 

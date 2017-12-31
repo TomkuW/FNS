@@ -1,8 +1,13 @@
 package Projekt.Okienka;
 
 
+import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import com.itextpdf.text.pdf.PdfFileSpecification;
+import com.itextpdf.text.pdf.PdfObject;
+import com.itextpdf.text.pdf.PdfWriter;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,16 +20,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import javafx.scene.input.MouseEvent;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.sql.Date;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -79,7 +87,9 @@ public class ZamowieniaKontroler implements Initializable {
     @FXML
     private static int wybierzZamowienieId;
     @FXML
-    private Button buton1;
+    private int id;
+    @FXML
+    private Label wybraapozycja;
 
 
     public static int getSelectedZamowienieId() {
@@ -320,54 +330,47 @@ public class ZamowieniaKontroler implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 Zamowienie z = zamowieniaTable.getSelectionModel().getSelectedItem();
-                z.getZamowienia_id();
+                wybraapozycja.setText(String.valueOf(z.getZamowienia_id()));
+                id = z.getZamowienia_id();
             }
         });
     }
 
 
-//
-//    @FXML
-//    private void createReport() throws SQLException, IOException {
-//        try {
-//
-//
-//
-//            Integer id = getSelectedZamowienieId();
-//            String selectStmt =("SELECT z.zamowienia_id, p.nazwa,p.technologia,p" +
-//                    ".predkosc,p" +
-//                    ".cena, p" +
-//                    ".okres, p.umowa_od, p.umowa_do FROM"
-//                    + " zamowienia z, pakiety p WHERE "
-//                    + "p.pakiet_id = z.pakiet_id AND "
-//                    + "zamowienia_id =" + id +"" );
-//
-//            Connection conn = ConntectToDB.Connector();
-//            PreparedStatement  preparedStatement = conn.prepareStatement(selectStmt);
-//            ResultSet rs = preparedStatement.executeQuery(selectStmt);
-//
-//
-//        } catch(Exception e){
-//
-//        }
-//
-//    }
-//
-//
-//
-//    @FXML
-//    public void save()  {
-//        FileChooser fileChooser = new FileChooser();
-//        fileChooser.setTitle("Zapisz Raport");
-//        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF Document", Arrays.asList("*.pdf", "*.PDF")));
-//        File file = fileChooser.showSaveDialog(parentStage);
-//        if (file != null) {
-//            if (file.getName().endsWith(".pdf")) {
-//
-//
-//            }
-//        }
-//    }
+    @FXML
+    public void tworzFakturePDF() throws SQLException, IOException {
+        try {
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDateTime date = LocalDateTime.now();
+            String currentDate = formatter.format(date);
+            String date1 = formatter.format(LocalDate.now());
+            String[] dates = {date1, currentDate};
+
+          //  int id = getSelectedZamowienieId();
+            ResultSet rs2 = ConntectToDB.getData("SELECT u.nazwa, u.technologia, u.predkosc, COUNT" +
+                    "(z.zamowienia_id) as ilosc, z.umowa_od, z.umowa_do, u.cena" +
+                    " from zamowienia z, pakiety u WHERE zamowienia_id = '"+id + "' AND u.pakiet_id = z.pakiet_id");
+
+            ResultSet rs3 = ConntectToDB.getData("SELECT *" +
+                    " from zamowienia z, klienci k WHERE z.zamowienia_id = '"+id + "' AND k.klient_id = z.klient_id");
+
+            Faktura f1 = new Faktura(dates, ConntectToDB.getCurrentUser(), rs2, rs3);
+            f1.create();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Informacja");
+            alert.setHeaderText(null);
+            alert.setContentText("Utworzono Fakture VAT");
+
+            alert.showAndWait();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
 
 

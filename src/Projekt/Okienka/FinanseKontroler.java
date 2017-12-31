@@ -1,23 +1,30 @@
 package Projekt.Okienka;
 
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
+
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.io.*;
 import java.net.URL;
 import java.sql.*;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import java.util.ResourceBundle;
 
 /**
  * Created by Tomek on 2017-12-16.
  */
-public class FinanseKontroler implements Initializable{
+public class FinanseKontroler implements Initializable {
 
 
-     Connection conn = null;
+    Connection conn = null;
     PreparedStatement stmt = null;
 
     @FXML
@@ -28,14 +35,17 @@ public class FinanseKontroler implements Initializable{
     @FXML
     private TableColumn<Zamowienie, Double> cena_col;
     @FXML
-    private TableColumn <Zamowienie, Integer>ilosc_col;
+    private TableColumn<Zamowienie, Integer> ilosc_col;
     @FXML
     private TableColumn<Zamowienie, Date> data_od_col;
     @FXML
     private TableColumn<Zamowienie, Date> data_do_col;
     @FXML
     private TableColumn<Zamowienie, Double> cenazbiorcza_col;
-
+    @FXML
+    private Button raport1;
+    @FXML
+    private Button raport2;
 
     @FXML
     private TableView finanseuslugiTable;
@@ -77,9 +87,6 @@ public class FinanseKontroler implements Initializable{
     }
 
 
-
-
-
     @FXML
     private void pokazFinansePracownik() throws SQLException, ClassNotFoundException {
         try {
@@ -94,7 +101,7 @@ public class FinanseKontroler implements Initializable{
         }
     }
 
-   // -----------------------------
+    // -----------------------------
     @FXML
     private void szukajFinansePracownik() throws SQLException, ClassNotFoundException {
         try {
@@ -108,7 +115,7 @@ public class FinanseKontroler implements Initializable{
             throw e;
         }
     }
-  //  ------------------
+    //  ------------------
 
     @FXML
     private void miejsceWTabeliFinansePracownika(ObservableList<Pracownik> prcData) {
@@ -117,12 +124,7 @@ public class FinanseKontroler implements Initializable{
     }
 
 
-
-
-
-
-
-    public static int getSelectedFinansUslugiId(){
+    public static int getSelectedFinansUslugiId() {
         return wybierzFinasnseUslugiId;
     }
 
@@ -156,7 +158,7 @@ public class FinanseKontroler implements Initializable{
         ulicaColumn.setCellValueFactory(cellData -> cellData.getValue().ulicaProperty());
         nr_domuColumn.setCellValueFactory(cellData -> cellData.getValue().nr_domuProperty());
         miejscowoscColumn.setCellValueFactory(cellData -> cellData.getValue().miejscowoscProperty());
-        wynagrodzenieColumn.setCellValueFactory(cellData ->cellData.getValue().wynagrodzenieProperty().asObject());
+        wynagrodzenieColumn.setCellValueFactory(cellData -> cellData.getValue().wynagrodzenieProperty().asObject());
         wynagrodzenieRoczneColumn.setCellValueFactory(cellData -> cellData.getValue().wynagrodzenieRoczneProperty().asObject());
 
         finansePracownikaTable.getSelectionModel().getSelectedItems().addListener(new ListChangeListener<Pracownik>() {
@@ -168,7 +170,6 @@ public class FinanseKontroler implements Initializable{
             }
         });
     }
-
 
 
     @FXML
@@ -187,6 +188,7 @@ public class FinanseKontroler implements Initializable{
             throw e;
         }
     }
+
     @FXML
     private void szukajFinanseUslugi() throws SQLException, ClassNotFoundException {
         try {
@@ -196,7 +198,7 @@ public class FinanseKontroler implements Initializable{
             //Populate Contractors on TableView
             miejsceWTabeliFinanseUslugi(ZamowienieData);
 
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Error occurred while getting Contractors information from DB.\n" + e);
             throw e;
         }
@@ -213,6 +215,64 @@ public class FinanseKontroler implements Initializable{
         finanseuslugiTable.setItems(rptData);
     }
 
+
+    /**
+     * Method to create reports according to value on comboBox
+     *
+     * @throws SQLException - Throws when occurs problem with SQL query
+     * @throws IOException - Throws when can't create new file with report
+     * @see WPDF
+     */
+
+    @FXML
+    public void tworzPDF() throws SQLException, IOException {
+        try {
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDateTime date = LocalDateTime.now();
+            String currentDate = formatter.format(date);
+            String date1 = formatter.format(LocalDate.now().minusYears(1));
+            String date2 = formatter.format(LocalDate.now());
+            String[] dates = {date1, date2, currentDate};
+
+            ResultSet rs = ConntectToDB.getData("SELECT z.pakiet_id, u.nazwa, z.umowa_od, COUNT" +
+                    "(u.pakiet_id) as ilosc, u.cena" +
+                    " from zamowienia z, pakiety u WHERE z.umowa_od BETWEEN '" + dates[0] + "' AND '" +
+                    dates[1] + "' AND u.pakiet_id = z.pakiet_id GROUP BY pakiet_id");
+
+            WPDF edc = new WPDF(dates, ConntectToDB.getCurrentUser(), rs);
+            edc.create();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void tworzPDFx() throws SQLException, IOException {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDateTime date = LocalDateTime.now();
+            String currentDate = formatter.format(date);
+            String date1 = formatter.format(LocalDate.now().minusMonths(1));
+            String date2 = formatter.format(LocalDate.now());
+            String[] dates = {date1, date2, currentDate};
+
+
+            ResultSet rs1 = ConntectToDB.getData("SELECT pracownik_id, imie, nazwisko, ulica, nr_domu, " +
+                    "miejscowosc, " +
+                    "wynagrodzenie, (wynagrodzenie * 0.1371) as skladki" +
+                    " from pracownicy");
+
+            WxPDF edc = new WxPDF(dates, ConntectToDB.getCurrentUser(), rs1);
+            edc.create();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
 }
