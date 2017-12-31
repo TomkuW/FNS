@@ -17,17 +17,12 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="764.0" layoutY="184.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
+      <Button layoutX="764.0" layoutY="184.0" mnemonicParsing="false" onAction="#tworzPDF" prefHeight="26.0" prefWidth="150.0" text="Generuj raport">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
       <Separator layoutY="335.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Label layoutX="756.0" layoutY="135.0" prefHeight="25.0" prefWidth="130.0" text="Wybrany pakiet :">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
       <Label layoutX="20.0" layoutY="342.0" text="Wyszukaj pracownika :">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -39,16 +34,11 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="764.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Generuj raport">
+      <Button layoutX="754.0" layoutY="480.0" mnemonicParsing="false" onAction="#tworzPDFx" prefHeight="26.0" prefWidth="160.0" text="Generuj raport">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="766.0" layoutY="407.0" text="Pracownik:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
       <TableView fx:id="finanseuslugiTable" layoutX="20.0" layoutY="81.0" prefHeight="192.0" prefWidth="691.0">
          <columns>
             <TableColumn fx:id="pakietIdZ_col" minWidth="41.0" prefWidth="82.0" text="ID usługi" />
@@ -85,8 +75,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="wybierzFinasnseUslugiId" layoutX="868.0" layoutY="139.0" text="Id uslugi" />
-      <Label fx:id="wybierzFinansePracownikId" layoutX="853.0" layoutY="409.0" text="Id pracownik" />
       <Label layoutX="20.0" layoutY="5.0" text="Wyszukaj usługę:">
          <font>
             <Font name="System Bold" size="16.0" />

@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.*;
+import java.text.DecimalFormat;
 
 /**
  * Created by Tomek on 2017-12-13.
@@ -107,6 +108,7 @@ public class FinanseDAO {
         //Declare a observable List which comprises of Contractor objects
         ObservableList<Zamowienie> List = FXCollections.observableArrayList();
 
+
         while (rs.next() && rs2.next()) {
             Zamowienie z = new Zamowienie();
             z.setPakiet_id(rs.getInt("pakiet_id"));
@@ -117,11 +119,6 @@ public class FinanseDAO {
 
             z.setIloscU(rs2.getInt("COUNT(pakiet_id)"));
             z.setCenaZbU(z.getCenaU()* z.getIloscU());
-
-
-
-
-
 
             //Add Cargo to the ObservableList
             List.add(z);

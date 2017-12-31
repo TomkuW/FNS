@@ -31,6 +31,20 @@ public class ConntectToDB {
     }
 
     /**
+     * napisz--
+     * @param query
+     * @return
+     * @throws SQLException
+     */
+    public static ResultSet getData(String query) throws SQLException {
+        Connection conn = ConntectToDB.Connector();
+        PreparedStatement preparedStatement = conn.prepareStatement(query);
+        ResultSet rs = preparedStatement.executeQuery(query);
+        return rs;
+
+    }
+
+    /**
      * Metoda nawiązująca połączenie z bazą danych
      * @return conn
      */

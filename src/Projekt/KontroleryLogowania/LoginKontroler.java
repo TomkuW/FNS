@@ -101,7 +101,7 @@ public class LoginKontroler implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Logowanie.fxml"));
             Pane layout = loader.load();
             Scene scene = new Scene(layout);
-
+            conn.isClosed();
             dialogeStage.setScene(scene);
             dialogeStage.show();
 

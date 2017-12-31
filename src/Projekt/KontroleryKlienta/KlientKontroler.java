@@ -183,10 +183,13 @@ public class KlientKontroler implements Initializable {
     @FXML
     public void openEdycjaDodawanieUsera() throws Exception {
         try {
+
+
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkienkaFNS - dodaj_klienta.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
+            stage.setTitle("Dodawanie klienta");
             stage.showAndWait();
 
         } catch (Exception e) {
@@ -202,13 +205,23 @@ public class KlientKontroler implements Initializable {
     @FXML
     public void openEdycjaModyfikacjaUsera() throws Exception {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkienkaFNS - modyfikuj_klienta.fxml"));
 
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.showAndWait();
+            if(getSelectedKlientId() != 0) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkienkaFNS - modyfikuj_klienta.fxml"));
 
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.showAndWait();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText(null);
+                alert.setContentText("Aby edytowac danego klienta, zaznacz docelowy wiersz w tabeli!");
+
+                alert.showAndWait();
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

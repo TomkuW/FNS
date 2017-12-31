@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.OknoModowolKontroler">
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryLogowania.OknoModowolKontroler">
    <children>
       <AnchorPane prefHeight="50.0" prefWidth="1024.0" AnchorPane.bottomAnchor="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -28,38 +28,38 @@
       </AnchorPane>
       <TabPane layoutY="65.0" prefHeight="704.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
         <tabs>
-            <Tab text="Witaj">
+            <Tab text="Witaj" fx:id="Witaj">
                 <content>
                     <fx:include source="../Okienka/OkienkaFNS - Witaj.fxml" />
                 </content>
             </Tab>
-            <Tab text="Klienci">
+            <Tab text="Klienci" fx:id="Klienci">
             <content>
                 <fx:include source="../Okienka/OkienkaFNS - Klienci.fxml" />
             </content>
             </Tab>
-            <Tab text="Usługi">
+            <Tab text="Usługi" fx:id="Usługi">
                 <content>
                     <fx:include source="../Okienka/OkienkaFNS - Usługi.fxml" />
                 </content>
              </Tab>
-            <Tab text="Pracownicy" >
+            <Tab text="Pracownicy" fx:id="Pracownicy" >
             <content>
                 <fx:include source="../Okienka/OkienkaFNS - Pracownicy.fxml" />
             </content>
             </Tab>
-            <Tab text="Zamównienia" >
+            <Tab text="Zamównienia" fx:id="Zamównienia" >
                 <content>
                     <fx:include source="../Okienka/OkienkaFNS - Zamównienia.fxml" />
                 </content>
             </Tab>
 
-            <Tab text="Finanse" >
+            <Tab text="Finanse" fx:id="Finanse">
                 <content>
                     <fx:include source="../Okienka/OkienkaFNS - Finanse.fxml " />
                 </content>
             </Tab>
-            <Tab text="Praca" >
+            <Tab text="Praca" fx:id="Praca">
                 <content>
                     <fx:include source="../Okienka/OkienkaFNS - Praca.fxml " />
                 </content>

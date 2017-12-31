@@ -59,7 +59,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="582.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaZamowienia" prefHeight="25.0" prefWidth="125.0" text="Usuń">
+      <Button layoutX="715.0" layoutY="557.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaZamowienia" prefHeight="25.0" prefWidth="125.0" text="Usuń">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -74,10 +74,16 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="697.0" layoutY="557.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="125.0" text="Faktura">
+      <Button layoutX="126.0" layoutY="590.0" mnemonicParsing="false" onAction="#tworzFakturePDF" prefHeight="25.0" prefWidth="125.0" text="Faktura">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label layoutX="14.0" layoutY="561.0" text="Wybierz zamówienie by wystawić fakture:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="wybraapozycja" layoutX="270.0" layoutY="561.0" prefHeight="17.0" prefWidth="101.0" text="&lt;ID zamówienia&gt;" />
    </children>
 </AnchorPane>
