@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryPracownika.ModyfikujPracownikaKontroler">
+   <children>
+      <Label layoutX="-46.0" layoutY="-60.0" text="PESEL :" />
+      <Label layoutX="-46.0" layoutY="-60.0" text="Imie :" />
+      <Label layoutX="-46.0" layoutY="-60.0" text="Ulica :" />
+      <Label layoutX="574.0" layoutY="38.0" prefHeight="18.0" prefWidth="145.0" text="Typ pracownika:" />
+      <Button fx:id="anuluj" layoutX="794.0" layoutY="256.0" mnemonicParsing="false" onAction="#przyciskAnulujModyfikacje" prefHeight="25.0" prefWidth="75.0" text="Anuluj">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="334.0" layoutY="34.0" prefHeight="26.0" prefWidth="134.0" text="Login :" />
+      <Label layoutX="334.0" layoutY="90.0" prefHeight="18.0" prefWidth="95.0" text="Hasło :" />
+      <TextField fx:id="haslo_k" layoutX="334.0" layoutY="116.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="login_k" layoutX="334.0" layoutY="60.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="331.0" layoutY="215.0" prefHeight="18.0" prefWidth="134.0" text="Wynagrodzenie :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="wynagrodzenie_k" layoutX="330.0" layoutY="237.0" prefHeight="25.0" prefWidth="200.0" promptText="zł" />
+      <Label layoutX="335.0" layoutY="143.0" prefHeight="18.0" prefWidth="95.0" text="Zawod:" />
+      <TextField fx:id="zawod_k" layoutX="334.0" layoutY="158.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="10.0" layoutY="10.0" />
+      <Label layoutX="23.0" layoutY="50.0" text="Imie :" />
+      <Label layoutX="11.0" layoutY="77.0" text="Nazwisko :" />
+      <Label layoutX="22.0" layoutY="151.0" text="Ulica :" />
+      <Label layoutX="11.0" layoutY="184.0" text="Nr domu :" />
+      <Label layoutX="1.0" layoutY="121.0" text="Miejscowość :" />
+      <Label layoutX="6.0" layoutY="221.0" text="Nr telefonu :" />
+      <Label layoutX="18.0" layoutY="257.0" text="E-mail :" />
+      <TextField fx:id="nazwisko_k" layoutX="82.0" layoutY="78.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="imie_k" layoutX="82.0" layoutY="48.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="miejscowosc_k" layoutX="82.0" layoutY="116.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="ulica_k" layoutX="82.0" layoutY="149.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="nr_domu_k" layoutX="82.0" layoutY="180.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="nr_telefon_k" layoutX="82.0" layoutY="217.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="email_k" layoutX="82.0" layoutY="253.0" prefHeight="25.0" prefWidth="144.0" />
+      <Button fx:id="modyfikuj" layoutX="699.0" layoutY="256.0" mnemonicParsing="false" onAction="#modykikujPracownika" prefHeight="25.0" prefWidth="75.0" text="OK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="23.0" layoutY="6.0" prefHeight="26.0" prefWidth="212.0" text="Modyfikacja pracownika:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="typ_pracownika_k" layoutX="572.0" layoutY="66.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
