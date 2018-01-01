@@ -107,23 +107,33 @@ public class UslugaKontroler implements Initializable {
         PreparedStatement prepStmt = null;
         try {
 
-            prepStmt = conn.prepareStatement(sql);
-            prepStmt.setString(1, nazwa);
-            prepStmt.setString(2, technologia);
-            prepStmt.setString(3, predkosc);
-            prepStmt.setString(4, cena);
-            prepStmt.setInt(5, okres);
+            if(technologia == null || predkosc == null || okres == 0){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Dodawanie pakietu");
+                alert.setHeaderText(null);
+                alert.setContentText("Niewystarczająca ilość podanych informacji by dodać usługę!");
+                pokazUsluga();
+                alert.showAndWait();
+            }
+            else {
 
-            prepStmt.executeUpdate();
+                prepStmt = conn.prepareStatement(sql);
+                prepStmt.setString(1, nazwa);
+                prepStmt.setString(2, technologia);
+                prepStmt.setString(3, predkosc);
+                prepStmt.setString(4, cena);
+                prepStmt.setInt(5, okres);
+
+                prepStmt.executeUpdate();
 
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Dodawanie pakietu");
-            alert.setHeaderText(null);
-            alert.setContentText("Nowy pakiet został dodany!");
-            pokazUsluga();
-            alert.showAndWait();
-
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Dodawanie pakietu");
+                alert.setHeaderText(null);
+                alert.setContentText("Nowy pakiet został dodany!");
+                pokazUsluga();
+                alert.showAndWait();
+            }
         } catch (SQLException  | ClassNotFoundException e) {
 
             System.out.print("Błąd podczas dodawania klienta" + e);
@@ -251,13 +261,23 @@ public class UslugaKontroler implements Initializable {
     @FXML
     public void openPotwierdzenieUsuwaniaUslug() throws Exception {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../UslugaKontroler/PotwierdzenieUsuwaniaUslug.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Usuwanie usług");
-            stage.showAndWait();
+            if(getSelectedUslugaId() != 0) {
 
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../UslugaKontroler/PotwierdzenieUsuwaniaUslug.fxml"));
+                Parent root = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Usuwanie usług");
+                stage.showAndWait();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText(null);
+                alert.setContentText("Aby usunąć usługę, zaznacz docelowy wiersz w tabeli!");
+
+                alert.showAndWait();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

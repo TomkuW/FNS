@@ -116,13 +116,12 @@ public class KlientKontroler implements Initializable {
     @FXML
     private void pokazKlient() throws SQLException, ClassNotFoundException {
         try {
-            //Get all Contractorsinformation
+
             ObservableList<Klient> UserData = KlientDAO.pokazKlient();
-            //Populate Contractors on TableView
             miejsceWTabeliKlienta(UserData);
 
         } catch (SQLException e) {
-            System.out.println("Error occurred while getting Contractors information from DB.\n" + e);
+            System.out.println("Wystąpił błąd podczas pobierania informacji z bazy danych.\n" + e);
             throw e;
         }
     }
@@ -138,10 +137,10 @@ public class KlientKontroler implements Initializable {
             String pharse = poleszukania.getText();
 
             ObservableList<Klient> Klientdata = KlientDAO.wyszukajKlient(pharse);
-            //Populate Employees on TableView
+
             miejsceWTabeliKlienta(Klientdata);
         } catch (SQLException e) {
-            System.out.println("Error occurred while getting cargos information from DB.\n" + e);
+            System.out.println("Wystąpił błąd podczas pobierania informacji z bazy danych.\n" + e);
             throw e;
         }
     }
@@ -152,7 +151,7 @@ public class KlientKontroler implements Initializable {
      */
     @FXML
     private void miejsceWTabeliKlienta(ObservableList<Klient> usrData) {
-        //Set items to the ContractorTable
+
         klientTable.setItems(usrData);
     }
 
@@ -163,13 +162,24 @@ public class KlientKontroler implements Initializable {
     @FXML
     public void openPotwierdzenieUsuwaniaUsera() throws Exception {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PotwierdzenieUsuwaniaKlient.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Usuwanie klienta");
-            stage.showAndWait();
 
+            if(getSelectedKlientId() != 0) {
+
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PotwierdzenieUsuwaniaKlient.fxml"));
+                Parent root = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Usuwanie klienta");
+                stage.showAndWait();
+            }
+            else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText(null);
+                alert.setContentText("Aby usunąć danego klienta, zaznacz docelowy wiersz w tabeli!");
+
+                alert.showAndWait();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -184,13 +194,12 @@ public class KlientKontroler implements Initializable {
     public void openEdycjaDodawanieUsera() throws Exception {
         try {
 
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkienkaFNS - dodaj_klienta.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setTitle("Dodawanie klienta");
-            stage.showAndWait();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkienkaFNS - dodaj_klienta.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.setTitle("Dodawanie klienta");
+                stage.showAndWait();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -212,6 +221,7 @@ public class KlientKontroler implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
+                stage.setTitle("Modyfikacja klienta");
                 stage.showAndWait();
             }
             else{

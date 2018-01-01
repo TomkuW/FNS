@@ -1,11 +1,11 @@
 package Projekt.Okienka;
 
+import Projekt.Modele.Pracownik;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.*;
-import java.text.DecimalFormat;
 
 /**
  * Created by Tomek on 2017-12-13.

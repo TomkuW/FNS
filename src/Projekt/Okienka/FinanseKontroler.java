@@ -1,5 +1,6 @@
 package Projekt.Okienka;
 
+import Projekt.Modele.Pracownik;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 
 import javafx.collections.ListChangeListener;
