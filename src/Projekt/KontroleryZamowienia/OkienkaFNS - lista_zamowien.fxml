@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryZamowienia.ZamowieniaKontroler">
+   <children>
+      <TableView fx:id="zamowieniaTable" layoutX="13.0" layoutY="102.0" prefHeight="449.0" prefWidth="974.0">
+         <columns>
+            <TableColumn minWidth="41.0" prefWidth="73.0" text="Zamówienie">
+               <columns>
+                  <TableColumn fx:id="zamowienie_id_col" minWidth="41.0" prefWidth="74.0" text="Id" />
+               </columns></TableColumn>
+            <TableColumn minWidth="18.0" prefWidth="307.0" text="Usługa">
+               <columns>
+                  <TableColumn fx:id="pakiet_id_col" minWidth="18.0" prefWidth="66.0" text="Id" />
+                  <TableColumn fx:id="nazwaPakietZ_col" minWidth="46.0" prefWidth="85.0" text="Nazwa " />
+                  <TableColumn fx:id="status_col" minWidth="0.0" prefWidth="68.0" text="Status" />
+                  <TableColumn fx:id="data_od_col" minWidth="0.0" prefWidth="45.0" text="Od" />
+                  <TableColumn fx:id="data_do_col" minWidth="42.0" prefWidth="42.0" text="Do" />
+               </columns>
+            </TableColumn>
+            <TableColumn minWidth="34.0" prefWidth="41.0" text="Klient">
+               <columns>
+                  <TableColumn fx:id="klient_id_col" minWidth="34.0" prefWidth="41.0" text="Id" />
+                  <TableColumn fx:id="imieKZ_col" minWidth="38.0" prefWidth="90.0" text="Imie " />
+                  <TableColumn fx:id="nazwiskoKZ_col" minWidth="45.0" prefWidth="61.0" text="Nazwisko" />
+                  <TableColumn fx:id="miejscowoscKZ_col" minWidth="45.0" prefWidth="67.0" text="Miasto" />
+                  <TableColumn fx:id="ulicaKZ_col" minWidth="45.0" prefWidth="67.0" text="Ulica" />
+               </columns>
+            </TableColumn>
+            <TableColumn minWidth="41.0" prefWidth="42.0" text="Pracownik">
+               <columns>
+                  <TableColumn fx:id="pracownik_id_col" minWidth="51.0" prefWidth="56.0" text="Id" />
+                  <TableColumn fx:id="pracownikImieZ_col" minWidth="46.0" prefWidth="109.0" text="Imie " />
+                  <TableColumn fx:id="pracownikNazwiskoZ_col" minWidth="46.0" prefWidth="102.0" text="Nazwisko" />
+               </columns>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Label layoutX="513.0" layoutY="17.0" text="Wyszukaj zamówienie :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="poleszukania4" layoutX="697.0" layoutY="14.0" prefHeight="30.0" prefWidth="200.0" promptText="Id zamówienia" />
+      <Button layoutX="912.0" layoutY="17.0" mnemonicParsing="false" onAction="#szukajZamowienie" prefHeight="25.0" prefWidth="75.0" text="Szukaj">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="13.0" layoutY="17.0" mnemonicParsing="false" onAction="#pokazZamowienie" prefHeight="25.0" prefWidth="101.0" text="Odśwież">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="715.0" layoutY="557.0" mnemonicParsing="false" onAction="#openPotwierdzenieUsuwaniaZamowienia" prefHeight="25.0" prefWidth="125.0" text="Usuń">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="43.0" text="Lista zakupionych pakietów internetowych:" textFill="#6f6a6a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="850.0" layoutY="557.0" mnemonicParsing="false" onAction="#openEdycjaModyfikacjaZamowienia" prefHeight="25.0" prefWidth="125.0" text="Modyfikuj">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="126.0" layoutY="590.0" mnemonicParsing="false" onAction="#tworzFakturePDF" prefHeight="25.0" prefWidth="125.0" text="Faktura">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="561.0" text="Wybierz zamówienie by wystawić fakture:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="wybraapozycja" layoutX="270.0" layoutY="561.0" prefHeight="17.0" prefWidth="101.0" text="&lt;ID zamówienia&gt;" />
+   </children>
+</AnchorPane>
