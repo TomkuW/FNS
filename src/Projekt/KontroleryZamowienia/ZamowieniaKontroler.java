@@ -248,7 +248,7 @@ public class ZamowieniaKontroler implements Initializable {
         zamowieniaTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             /**
-             *
+             *Pobranie wartosci id zamowienia po kliknieciu w dany wiersz tabeli
              */
             public void handle(MouseEvent event) {
                 Zamowienie z = zamowieniaTable.getSelectionModel().getSelectedItem();
