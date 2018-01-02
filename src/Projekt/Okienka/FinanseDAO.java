@@ -1,6 +1,7 @@
 package Projekt.Okienka;
 
 import Projekt.Modele.Pracownik;
+import Projekt.Modele.Zamowienie;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

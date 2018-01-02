@@ -1,5 +1,6 @@
 package Projekt.Okienka;
 
+import Projekt.Modele.Zamowienie;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
