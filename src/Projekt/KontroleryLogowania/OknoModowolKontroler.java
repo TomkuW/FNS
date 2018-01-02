@@ -46,6 +46,7 @@ public class OknoModowolKontroler implements Initializable{
             ConntectToDB.Connector().isClosed();
             Pane layout = loader.load();
             Scene scene = new Scene(layout);
+            dialogeStage.setTitle("Logowanie");
             dialogeStage.setScene(scene);
             dialogeStage.show();
 
@@ -75,12 +76,12 @@ public class OknoModowolKontroler implements Initializable{
         }
         if(ConntectToDB.getCurrentUser()[3].equals("Kierownik")){
             Witaj.setDisable(false);
-            Klienci.setDisable(true);
+            Klienci.setDisable(false);
             Usługi.setDisable(false);
             Pracownicy.setDisable(false);
             Zamównienia.setDisable(false);
             Finanse.setDisable(false);
-            Praca.setDisable(false);
+            Praca.setDisable(true);
         }
         if(ConntectToDB.getCurrentUser()[3].equals("Handlowiec")){
             Witaj.setDisable(false);
@@ -109,7 +110,6 @@ public class OknoModowolKontroler implements Initializable{
             Finanse.setDisable(true);
             Praca.setDisable(false);
         }
-
 
     }
 }

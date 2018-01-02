@@ -102,6 +102,7 @@ public class LoginKontroler implements Initializable {
             Pane layout = loader.load();
             Scene scene = new Scene(layout);
             conn.isClosed();
+            dialogeStage.setTitle("Logowanie");
             dialogeStage.setScene(scene);
             dialogeStage.show();
 

@@ -1,5 +1,6 @@
 package Projekt.Okienka;
 
+import Projekt.KontroleryZamowienia.ZamowieniaKontroler;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
@@ -65,8 +66,9 @@ public class Faktura {
                 document = new Document();
 
                 PdfWriter.getInstance(document, new FileOutputStream
-                        ("Faktury\\Faktura_Sprzedazy_" +ZamowieniaKontroler.getSelectedZamowienieId()+"_"+ date1 + "" +
+                        ("Faktury\\Faktura_Sprzedazy_" + ZamowieniaKontroler.getSelectedZamowienieId()+"_"+ date1 + "" +
                                 ".pdf"));
+
 
                 document.open();
                 addMetaData(document);

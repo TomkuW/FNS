@@ -11,58 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Usluga.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Usluga.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Zamowienie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Zamowienie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pracownik.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Pracownik.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Klient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Klient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -81,6 +30,7 @@
       <find>date</find>
       <find>klientTable</find>
       <find>imie</find>
+      <find>file</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -91,31 +41,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/WitajKontroler.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Kontrolery/WitajKontroler.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Kontrolery/KlientKontroler.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/ConntectToDB.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/Login.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/LoginKontroler.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/Login.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/OkienkaFNS - lista_zamowien.fxml" />
         <option value="$PROJECT_DIR$/src/Projekt/DAO/KlientDAO.java" />
         <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OkienkaFXMLKontroler.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/OknoModowolKontroler.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/PracaKontroler.java" />
         <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OkienkaFNS.fxml" />
-        <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/LoginKontroler.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OknoModowolKontroler.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/CreatePDF.java" />
         <option value="$PROJECT_DIR$/src/Projekt/PodlaczonieDoBazy/ConntectToDB.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/FinanseDAO.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/DodajZamowienieKontroler.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/FinanseKontroler.java" />
         <option value="$PROJECT_DIR$/src/Projekt/WxPDF.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/WxPDF.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/WPDF.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/ZamowieniaKontroler.java" />
-        <option value="$PROJECT_DIR$/src/Projekt/Okienka/Faktura.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/Usluga.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Okienka/UslugaDAO.java" />
         <option value="$PROJECT_DIR$/src/Projekt/DAO/UslugaDAO.java" />
@@ -142,6 +79,19 @@
         <option value="$PROJECT_DIR$/src/Projekt/Modele/Klient.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Modele/Login.java" />
         <option value="$PROJECT_DIR$/src/Projekt/Modele/Pracownik.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/Okienka/ZamowieniaDAO.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/Okienka/DodajZamowienieKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/Okienka/Faktura.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/Okienka/UsunZamowienieKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/Okienka/ZamowieniaKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/Okienka/ModyfikujZamowienieKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/LoginKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OknoModowolKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/DAO/ZamowieniaDAO.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/ModyfikujZamowienieKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/UsunZamowienieKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/ZamowieniaKontroler.java" />
+        <option value="$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/DodajZamowienieKontroler.java" />
       </list>
     </option>
   </component>
@@ -172,10 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,26 +145,16 @@
               <item name="Projekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="KontroleryUslugi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="Modele" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Projekt" type="462c0819:PsiDirectoryNode" />
               <item name="Okienka" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,22 +171,22 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Projekt" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="groovy.util.GroovyTestCase" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\Okienka" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\KontroleryZamowienia" />
+      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\PracownikKontroler" />
+      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\UslugaKontroler" />
+      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\DAO" />
+      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\KontroleryLogowania" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Projekt.Okienka" />
       <recent name="Projekt" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\PracownikKontroler" />
-      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\UslugaKontroler" />
-      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\DAO" />
-      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\KontroleryLogowania" />
-      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\PodlaczonieDoBazy" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomek\IdeaProjects\Projekt\src\Projekt\Okienka" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -495,7 +431,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30181542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30635402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -520,8 +456,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/src/Projekt/Lib/itext7-forms-7.0.2.jar!/com/itextpdf/forms/PdfPageFormCopier.class" />
-    <entry file="jar://$PROJECT_DIR$/src/Projekt/Lib/itext7-forms-7.0.2.jar!/com/itextpdf/forms/PdfAcroForm.class" />
     <entry file="jar://$PROJECT_DIR$/src/Projekt/Lib/itext7-pdftest-7.0.2.jar!/com/itextpdf/test/ExtendedITextTest.class" />
     <entry file="jar://$PROJECT_DIR$/src/Projekt/Lib/itext7-pdftest-7.0.2.jar!/com/itextpdf/test/ITextTest.class" />
     <entry file="jar://$PROJECT_DIR$/src/Projekt/Lib/itext7-pdfa-7.0.2.jar!/com/itextpdf/pdfa/PdfADocument.class" />
@@ -535,19 +469,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/OkienkaFNS - modyfikuj_praca.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/ModyfikujZamowienieKontroler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -560,13 +487,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/PołączenieDoBazy.java" />
     <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/Logowanie.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/Main.java">
@@ -576,31 +503,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/OkienkaFNS - lista_zamowien.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/OkienkaFNS - lista_zamowien.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="76" column="69" lean-forward="false" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OkienkaFXMLKontroler.java" />
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/LoginKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="103" column="28" lean-forward="false" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OknoModowolKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/src/Projekt/Biblioteki/itext7-pdfa-7.0.2.jar!/META-INF/maven/com.itextpdf/pdfa/pom.xml" />
     <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/PracaKontroler.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -616,44 +529,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/ZamowieniaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="92" column="78" lean-forward="true" selection-start-line="92" selection-start-column="78" selection-end-line="92" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OkienkaFNS.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="46" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/OkienkaFNS - Witaj.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/OkienkaFNS - Witaj.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/PracaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/DodajZamowienieKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="241" column="7" lean-forward="false" selection-start-line="241" selection-start-column="7" selection-end-line="247" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -671,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/Faktura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/DAO/UslugaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -686,68 +578,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryUslugi/PotwierdzenieUsuwaniaUslug.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/WitajKontroler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/DAO/KlientDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="177" column="5" lean-forward="false" selection-start-line="177" selection-start-column="5" selection-end-line="180" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryKlienta/DodajKlientaKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-767">
-          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="43" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/ZamowieniaKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="372" column="0" lean-forward="false" selection-start-line="372" selection-start-column="0" selection-end-line="372" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryUslugi/UsunUslugaKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryUslugi/UslugaKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="123" column="40" lean-forward="true" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryKlienta/KlientKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="119" column="70" lean-forward="false" selection-start-line="119" selection-start-column="70" selection-end-line="119" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryKlienta/ModyfikujKlientaKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -766,16 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryPracownika/PracownikKontroler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryPracownika/UsunPracownikKontroler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -790,34 +616,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/FinanseDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Usluga.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/FinanseKontroler.java">
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Zamowienie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="222" column="61" lean-forward="true" selection-start-line="222" selection-start-column="61" selection-end-line="222" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Klient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="17">
           <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Klient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/DAO/KlientDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="83" column="2" lean-forward="false" selection-start-line="83" selection-start-column="2" selection-end-line="87" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -830,19 +664,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Zamowienie.java">
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryUslugi/UslugaKontroler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="325">
+          <caret line="229" column="85" lean-forward="true" selection-start-line="229" selection-start-column="85" selection-end-line="229" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projekt/Modele/Usluga.java">
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryUslugi/UsunUslugaKontroler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state relative-caret-position="901">
+          <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="113" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryKlienta/ModyfikujKlientaKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="114" column="7" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryKlienta/KlientKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="113" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryKlienta/DodajKlientaKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="42" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/Faktura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3663">
+          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryPracownika/PracownikKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2609">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/WitajKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/LoginKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="102" column="44" lean-forward="false" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryLogowania/OknoModowolKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/DAO/ZamowieniaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3617">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/ModyfikujZamowienieKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/UsunZamowienieKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-541">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/DodajZamowienieKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="161" column="75" lean-forward="false" selection-start-line="161" selection-start-column="75" selection-end-line="161" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/KontroleryZamowienia/ZamowieniaKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="178" column="79" lean-forward="false" selection-start-line="178" selection-start-column="79" selection-end-line="178" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/OkienkaFNS- Potwierdzeniewykonania.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/FinanseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projekt/Okienka/FinanseKontroler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3472">
+          <caret line="222" column="6" lean-forward="true" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

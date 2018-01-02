@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="DATE_PICKER" minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.DodajZamowienieKontroler">
+<AnchorPane accessibleRole="DATE_PICKER" minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryZamowienia.DodajZamowienieKontroler">
    <children>
       <Accordion layoutX="281.0" layoutY="110.0">
          <opaqueInsets>
