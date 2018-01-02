@@ -3,7 +3,7 @@ package Projekt.Modele;
 import javafx.beans.property.*;
 
 /**
- * Deklaracja Tabeli Klienci
+ * Deklaracja Tabeli Klienci.
  *
  * Created by TomaszWaberski on 2017-11-17.
  */
