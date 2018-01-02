@@ -3,10 +3,11 @@ package Projekt.Modele;
 import javafx.beans.property.*;
 
 /**
- *  Deklaracja Tabeli Pakiety
+ *  Deklaracja Tabeli Pakiety.
  *
  * Created by Tomek on 2017-11-23.
  */
+
 public class Usluga {
 
     private IntegerProperty pakiet_id;
