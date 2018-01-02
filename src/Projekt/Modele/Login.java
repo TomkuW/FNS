@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.*;
 
 /**
- * Klasa zawierająca model logowania
+ * Klasa zawierająca model logowania.
  *
  * Created by Tomek on 2017-11-14.
  */
