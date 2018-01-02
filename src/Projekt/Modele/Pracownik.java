@@ -6,7 +6,7 @@ import java.sql.Date;
 
 
 /**
- * Klasa kontrolera FXML zawierająca metody zarządzania pracownikami.
+ * Deklaracja Tabeli Pracownicy.
  *
  * Created by Tomek on 2017-11-25.
  */
