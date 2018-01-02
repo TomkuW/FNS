@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.FinanseKontroler">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryFinanse.FinanseKontroler">
    <children>
       <TextField fx:id="poleszukaj" layoutX="20.0" layoutY="35.0" prefHeight="30.0" prefWidth="200.0" promptText="Nazwa kupionego pakietu" />
       <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" onAction="#szukajFinanseUslugi" prefHeight="26.0" prefWidth="70.0" text="Szukaj">

@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 /**
  * Klasa zawierająca metode modyfikacji danych pracownika w bazie danych.
- * <p>
+ *
  * Created by Tomek on 2017-11-17.
  */
 public class ModyfikujPracownikaKontroler implements Initializable {
