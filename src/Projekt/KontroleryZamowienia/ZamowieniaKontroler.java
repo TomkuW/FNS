@@ -238,9 +238,14 @@ public class ZamowieniaKontroler implements Initializable {
              *Pobranie wartosci id zamowienia po kliknieciu w dany wiersz tabeli
              */
             public void handle(MouseEvent event) {
-                Zamowienie z = zamowieniaTable.getSelectionModel().getSelectedItem();
-                wybraapozycja.setText(String.valueOf(z.getZamowienia_id()));
-                id = z.getZamowienia_id();
+                try {
+                    Zamowienie z = zamowieniaTable.getSelectionModel().getSelectedItem();
+                    wybraapozycja.setText(String.valueOf(z.getZamowienia_id()));
+                    id = z.getZamowienia_id();
+                }
+                catch (NullPointerException e){
+                    System.out.println("false");
+                }
             }
         });
     }
