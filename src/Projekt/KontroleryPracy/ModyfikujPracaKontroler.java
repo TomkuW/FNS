@@ -63,7 +63,7 @@ public class ModyfikujPracaKontroler implements Initializable {
     private void modykikujZamowienie() throws SQLException, ClassNotFoundException {
 
         try {
-            if(PracaKontroler.getSelectedPracaZamowienieId() != 0) {
+
                 PracaDAO.updatePZamowienie(PracaKontroler.getSelectedPracaZamowienieId(), status_z.getSelectionModel()
                         .getSelectedItem().toString());
 
@@ -76,22 +76,12 @@ public class ModyfikujPracaKontroler implements Initializable {
                 alert.setContentText("Status wybranego zamówienie został zmodyfikowany!");
 
                 alert.showAndWait();
-            }
-            else
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Błąd modyfikacji statusu zamówienia");
-                alert.setHeaderText(null);
-                alert.setContentText("Aby zmodyfikować status danego zamówienia, wybierz konkretny wiersz zamówienia " +
-                        "z tabeli");
 
-                alert.showAndWait();
 
-            }
         } catch (SQLException e) {
             System.out.print("Błąd podczas modyfikacji klienta" + e);
         }
-    PracaDAO.pokazPraca();
+
     }
 
     /**

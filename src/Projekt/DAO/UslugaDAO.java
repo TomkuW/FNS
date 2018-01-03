@@ -1,7 +1,7 @@
 package Projekt.DAO;
 
 import Projekt.Modele.Usluga;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

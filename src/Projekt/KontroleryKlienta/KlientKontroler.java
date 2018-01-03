@@ -2,7 +2,7 @@ package Projekt.KontroleryKlienta;
 
 import Projekt.DAO.KlientDAO;
 import Projekt.Modele.Klient;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

@@ -1,7 +1,7 @@
 package Projekt.KontroleryLogowania;
 
 import Projekt.Modele.Login;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

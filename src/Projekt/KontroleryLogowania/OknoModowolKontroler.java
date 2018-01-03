@@ -1,19 +1,22 @@
 package Projekt.KontroleryLogowania;
 
-import Projekt.Modele.Login;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Tab;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.Connection;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -31,6 +34,7 @@ public class OknoModowolKontroler implements Initializable{
     @FXML private Tab Zamównienia;
     @FXML private Tab Finanse;
     @FXML private Tab Praca;
+    @FXML private Button wylogujButton;
 
 
     /**
@@ -39,21 +43,36 @@ public class OknoModowolKontroler implements Initializable{
      */
     @FXML
     public void wyloguj(ActionEvent event) {
-        try {
 
-            ((Node) event.getSource()).getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../KontroleryLogowania/Logowanie.fxml"));
-            ConntectToDB.Connector().isClosed();
-            Pane layout = loader.load();
-            Scene scene = new Scene(layout);
-            dialogeStage.setTitle("Logowanie");
-            dialogeStage.setScene(scene);
-            dialogeStage.show();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Wylogowywanie");
+            alert.setHeaderText("Wylogowanie z konta "+ ConntectToDB.getCurrentUser()[3]);
+            alert.setContentText("Czy na pewno chce się wylogować?");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
 
-        } catch (Exception e) {
-            System.err.println("Problem z zamknieciem polaczenia");
-            e.printStackTrace();
-        }
+                try {
+
+                    ((Node) event.getSource()).getScene().getWindow().hide();
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../KontroleryLogowania/Logowanie.fxml"));
+
+                    ConntectToDB.Connector().isClosed();
+                    Pane layout = loader.load();
+                    Scene scene = new Scene(layout);
+                    dialogeStage.setTitle("Logowanie");
+                    dialogeStage.setScene(scene);
+                    dialogeStage.show();
+
+                } catch (Exception e) {
+                    System.err.println("Problem z zamknieciem polaczenia");
+                    e.printStackTrace();
+                }
+
+            }
+            else
+            {
+                dialogeStage.close();
+            }
     }
 
 

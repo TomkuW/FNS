@@ -1,7 +1,6 @@
 package Projekt.KontroleryZamowienia;
 
-import Projekt.KontroleryZamowienia.ZamowieniaKontroler;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -15,7 +14,6 @@ import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**

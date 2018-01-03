@@ -5,7 +5,7 @@ import Projekt.DAO.ZamowieniaDAO;
 import Projekt.Modele.Klient;
 import Projekt.Modele.Pracownik;
 import Projekt.Modele.Usluga;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -82,12 +82,14 @@ public class DodajZamowienieKontroler implements Initializable {
                         "zamówień klikając w przycisk Lista sprzedanych usług");
 
                 alert.showAndWait();
+
             }
-            else{
+            else
+            {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Dodawanie zamówienia");
                 alert.setHeaderText("Błąd dodawania zamówienia!");
-                alert.setContentText("Aby sprzedać daną usługę, wskaź pracownika, klienta oraz usługe wybierając dany" +
+                alert.setContentText("Aby sprzedać daną usługę, wskaz pracownika, klienta oraz usługe wybierając dany" +
                         " wiersz tabeli");
 
                 alert.showAndWait();

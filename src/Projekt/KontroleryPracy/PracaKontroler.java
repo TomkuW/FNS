@@ -2,7 +2,7 @@ package Projekt.KontroleryPracy;
 
 import Projekt.Modele.Zamowienie;
 import Projekt.DAO.PracaDAO;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -185,17 +185,31 @@ public class PracaKontroler implements Initializable {
     @FXML
     public void openEdycjaModyfikacjaZamowienia() throws Exception {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../KontroleryPracy/OkienkaFNS - modyfikuj_praca.fxml"));
 
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setTitle("Modyfikacja statusu");
-            stage.showAndWait();
+            if(getSelectedPracaZamowienieId() !=0) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../KontroleryPracy/OkienkaFNS - modyfikuj_praca.fxml"));
 
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.setTitle("Modyfikacja statusu");
+                stage.showAndWait();
+                pokazPraca();
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Błąd modyfikacji statusu zamówienia");
+                alert.setHeaderText(null);
+                alert.setContentText("Aby zmodyfikować status danego zamówienia, wybierz konkretny wiersz zamówienia " +
+                        "z tabeli");
+
+                alert.showAndWait();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        pokazPraca();
     }
 
 

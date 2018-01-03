@@ -2,7 +2,7 @@ package Projekt.DAO;
 
 import Projekt.Modele.Pracownik;
 import Projekt.Modele.Zamowienie;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

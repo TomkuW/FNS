@@ -1,6 +1,6 @@
 package Projekt.Modele;
 
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 
 import java.sql.Connection;
 import java.sql.*;

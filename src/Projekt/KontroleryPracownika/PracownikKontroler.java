@@ -2,7 +2,7 @@ package Projekt.KontroleryPracownika;
 
 import Projekt.DAO.PracownikDAO;
 import Projekt.Modele.Pracownik;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

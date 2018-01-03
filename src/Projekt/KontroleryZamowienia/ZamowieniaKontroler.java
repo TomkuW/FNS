@@ -3,7 +3,7 @@ package Projekt.KontroleryZamowienia;
 
 import Projekt.DAO.ZamowieniaDAO;
 import Projekt.Modele.Zamowienie;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;

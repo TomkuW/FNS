@@ -2,7 +2,7 @@ package Projekt.KontroleryUslugi;
 
 import Projekt.DAO.UslugaDAO;
 import Projekt.Modele.Usluga;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 

@@ -3,7 +3,7 @@ package Projekt.KontroleryFinanse;
 import Projekt.DAO.FinanseDAO;
 import Projekt.Modele.Pracownik;
 import Projekt.Modele.Zamowienie;
-import Projekt.PodlaczonieDoBazy.ConntectToDB;
+import Projekt.PodlaczenieDoBazy.ConntectToDB;
 
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
