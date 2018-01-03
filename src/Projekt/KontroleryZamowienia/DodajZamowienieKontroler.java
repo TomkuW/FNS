@@ -113,8 +113,15 @@ public class DodajZamowienieKontroler implements Initializable {
              * Pobranie wartosci imienia i nazwiska po kliknieciu w dany wiersz tabeli
              */
             public void handle(MouseEvent event) {
+
+                try{
                 Klient person = klientTable.getSelectionModel().getSelectedItem();
                 klient.setText(person.getImie()+ " "+ person.getNazwisko());
+                }
+                catch (NullPointerException e) {
+                     System.out.println("false");
+
+                }
             }
         });
         uslugaTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -124,21 +131,25 @@ public class DodajZamowienieKontroler implements Initializable {
              * czas umowy.
              */
             public void handle(MouseEvent event) {
-                Usluga offer = uslugaTable.getSelectionModel().getSelectedItem();
-                pakiet.setText(offer.getNazwa());
 
-                if(offer.getOkres() == 24) {
+                try {
+                    Usluga offer = uslugaTable.getSelectionModel().getSelectedItem();
+                    pakiet.setText(offer.getNazwa());
 
-                    umowa_od.setValue(LocalDate.now());
-                    umowa_do.setValue(umowa_od.getValue().plusYears(2));
+                    if (offer.getOkres() == 24) {
 
+                        umowa_od.setValue(LocalDate.now());
+                        umowa_do.setValue(umowa_od.getValue().plusYears(2));
+
+                    }
+                    if (offer.getOkres() == 12) {
+
+                        umowa_od.setValue(LocalDate.now());
+                        umowa_do.setValue(umowa_od.getValue().plusYears(1));
+                    }
+                } catch (NullPointerException e) {
+                    System.out.println("false");
                 }
-                if (offer.getOkres() == 12){
-
-                    umowa_od.setValue(LocalDate.now());
-                    umowa_do.setValue(umowa_od.getValue().plusYears(1));
-                }
-
             }
         });
         pracownikTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -147,9 +158,14 @@ public class DodajZamowienieKontroler implements Initializable {
              * Pobranie wartosci imienia i nazwiska po kliknieciu w dany wiersz tabeli
              */
             public void handle(MouseEvent event) {
-                Pracownik jobber = pracownikTable.getSelectionModel().getSelectedItem();
-                pracownik.setText(jobber.getImie()+ " "+ jobber.getNazwisko());
 
+                try {
+                    Pracownik jobber = pracownikTable.getSelectionModel().getSelectedItem();
+                    pracownik.setText(jobber.getImie() + " " + jobber.getNazwisko());
+                }
+                catch (NullPointerException e) {
+                    System.out.println("false");
+                }
             }
         });
     }
