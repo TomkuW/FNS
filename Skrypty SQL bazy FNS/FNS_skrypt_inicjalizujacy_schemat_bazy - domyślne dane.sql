@@ -104,7 +104,7 @@ VALUES(null,'Marta','Rybus','94391645551','Babica','null','121A','671777566');
 
 -- Tworzenie pracowników
 INSERT INTO pracownicy (pracownik_id, imie, nazwisko, zawod, PESEL, ulica, nr_domu, miejscowosc, email, nr_telefon, wynagrodzenie, login, data_zatrudnienia, haslo, typ_pracownika)
-VALUES(null,'Andrzej','Kochanowski','Informatyk','90120365433','Alejkowa','15','Straszydle','andriupapaja@gmail.com','785226547','4099','admin123','2017-01-04','admin321','Administrator');
+VALUES(null,'Andrzej','Kochanowski','Informatyk','90120365433','Alejkowa','15','Straszydle','andriupapaja@gmail.com','785226547','4099','admin','2017-01-04','admin','Administrator');
 INSERT INTO pracownicy (pracownik_id, imie, nazwisko, zawod, PESEL, ulica, nr_domu, miejscowosc, email, nr_telefon, wynagrodzenie, login, data_zatrudnienia, haslo, typ_pracownika)
 VALUES(null,'Filip','Pazyra','Kierownik','84112365844','Rejtana','16/12','Rzeszów','majonkamax@gmail.com','508456258','4499','kierownik123','2017-03-03','lenistwo321','Kierownik');
 INSERT INTO pracownicy (pracownik_id, imie, nazwisko, zawod, PESEL, ulica, nr_domu, miejscowosc, email, nr_telefon, wynagrodzenie, login, data_zatrudnienia, haslo, typ_pracownika)
@@ -140,5 +140,7 @@ VALUES ( null,'LIKE NET','ADSL2+','6Mbit/s/512Kbit/s','30.33','24');
 INSERT INTO pakiety (pakiet_id,nazwa,technologia,predkosc,cena,okres)
 VALUES ( null,'COSMO NET','FTTH','20Mbit/s/2Mbit/s','40.33','24');
 
-
+-- Tworzenie zamowienia
+INSERT INTO zamowienia (zamowienia_id,klient_id,pakiet_id,pracownik_id,umowa_od,umowa_do,status)
+VALUES (null,'1','1','5','2017-01-04','2019-01-04','W trakcie');
   
