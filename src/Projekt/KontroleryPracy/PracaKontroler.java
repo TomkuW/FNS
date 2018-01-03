@@ -121,7 +121,7 @@ public class PracaKontroler implements Initializable {
              * @param event nieużywany
              */
             @Override
-            public void handle(MouseEvent event) throws NullPointerException {
+            public void handle(MouseEvent event) {
                 try {
                     Zamowienie z = pracaTable.getSelectionModel().getSelectedItem();
                     idwybranego.setText(String.valueOf(z.getZamowienia_id()));

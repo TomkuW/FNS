@@ -78,6 +78,13 @@ public class ModyfikujZamowienieKontroler implements Initializable {
             stage.setTitle("Mofyfikacja zamówienia");
             stage.close();
 
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Modyfikacja zamówienia");
+            alert.setHeaderText(null);
+            alert.setContentText("Zamówienie zostało zmodyfikowane");
+
+            alert.showAndWait();
+
         } catch (SQLException e) {
             System.out.print("Błąd podczas modyfikacji klienta" + e);
         }

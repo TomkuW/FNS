@@ -101,6 +101,16 @@ public class UslugaKontroler implements Initializable {
         String cena = cena_usluga.getText();
         int okres = okres();
 
+        if(cena.contains(",")){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Dodawanie pakietu");
+            alert.setHeaderText("Wartosc ułamkową ceny pisz po kropce");
+            alert.setContentText("Program automatycznie poprawił tą zależnośc");
+
+            alert.showAndWait();
+
+            cena = cena.replace(",",".");
+        }
 
         String sql = "insert into pakiety (nazwa, technologia, predkosc, cena, okres) values(?,?,?,?,?)";
         Connection conn = ConntectToDB.Connector();
@@ -263,12 +273,13 @@ public class UslugaKontroler implements Initializable {
         try {
             if(getSelectedUslugaId() != 0) {
 
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/PotwierdzenieUsuwaniaUslug.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PotwierdzenieUsuwaniaUslug.fxml"));
                 Parent root = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Usuwanie usług");
                 stage.showAndWait();
+
             }
             else{
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -278,7 +278,9 @@ public class PracownikKontroler implements Initializable {
         LocalDateTime date = LocalDateTime.now();
         String currentDate = formatter.format(date);
 
-
+        if(wynagrodzenie.contains(",")){
+            wynagrodzenie = wynagrodzenie.replace(",",".");
+        }
 
         String sql = "insert into pracownicy (imie,nazwisko,zawod,PESEL,ulica,nr_domu,miejscowosc,nr_telefon, email, " +
                 "login, haslo, wynagrodzenie,typ_pracownika,data_zatrudnienia) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";

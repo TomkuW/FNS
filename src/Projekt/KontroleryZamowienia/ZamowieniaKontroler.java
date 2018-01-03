@@ -182,11 +182,6 @@ public class ZamowieniaKontroler implements Initializable {
                 stage.setTitle("Usuwanie zamówienia");
                 stage.showAndWait();
 
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Usuwanie zamowienia");
-                alert.setHeaderText(null);
-                alert.setContentText("Zamówienie zostało usunięte!");
-                alert.showAndWait();
             }else{
 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -216,15 +211,8 @@ public class ZamowieniaKontroler implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
-                stage.showAndWait();
                 stage.setTitle("Modyfikacja zamowienia");
-
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Modyfikacja zamówienia");
-                alert.setHeaderText(null);
-                alert.setContentText("Zamówienie zostało zmodyfikowane");
-
-                alert.showAndWait();
+                stage.showAndWait();
             }
             else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);

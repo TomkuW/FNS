@@ -3,6 +3,7 @@ package Projekt.KontroleryZamowienia;
 import Projekt.DAO.ZamowieniaDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -47,6 +48,12 @@ public class UsunZamowienieKontroler implements Initializable {
             Stage stage = (Stage) usunButtonZ.getScene().getWindow();
             stage.setTitle("Usuwanie Zamówienia");
             stage.close();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Usuwanie zamowienia");
+            alert.setHeaderText(null);
+            alert.setContentText("Zamówienie zostało usunięte!");
+            alert.showAndWait();
 
         } catch (Exception e) {
             throw e;

@@ -136,8 +136,11 @@ public class Faktura {
         per.add(new Paragraph("Sprzedawca: ", myFont));
         per.setAlignment(Element.ALIGN_LEFT);
         per.add(new Paragraph("FNS SOFTWARE", greyFont));
-        per.add(new Paragraph("Inżynierski projekt (zespołowy)"));
-        per.add(new Paragraph("III 2017/2018 Informatyka i Ekonometria"));
+        per.add(new Paragraph("Inżynierski projekt zespolowy"));
+        per.add(new Paragraph("Tomasz Waberski & Fabian Kulak"));
+        per.add(new Paragraph("& Jacek Korab & Kamil Nowak"));
+        per.add(new Paragraph("& Maciej Jakiel Sp.z.o.o"));
+        per.add(new Paragraph("2017/2018 Informatyka i Ekonometria III"));
         addEmptyLine(per, 1);
         document.add(per);
 

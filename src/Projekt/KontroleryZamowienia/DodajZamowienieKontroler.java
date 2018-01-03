@@ -107,6 +107,7 @@ public class DodajZamowienieKontroler implements Initializable {
      * Zamowienia
      */
     private void setValueLabel(){
+
         klientTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             /**
@@ -115,11 +116,11 @@ public class DodajZamowienieKontroler implements Initializable {
             public void handle(MouseEvent event) {
 
                 try{
-                Klient person = klientTable.getSelectionModel().getSelectedItem();
-                klient.setText(person.getImie()+ " "+ person.getNazwisko());
+                    Klient person = klientTable.getSelectionModel().getSelectedItem();
+                    klient.setText(person.getImie()+ " "+ person.getNazwisko());
                 }
                 catch (NullPointerException e) {
-                     System.out.println("false");
+                    System.out.println("false");
 
                 }
             }
