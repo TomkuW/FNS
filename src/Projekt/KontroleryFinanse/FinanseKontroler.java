@@ -3,8 +3,6 @@ package Projekt.KontroleryFinanse;
 import Projekt.DAO.FinanseDAO;
 import Projekt.Modele.Pracownik;
 import Projekt.Modele.Zamowienie;
-import Projekt.Okienka.WPDF;
-import Projekt.Okienka.WxPDF;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 
 import javafx.collections.ListChangeListener;

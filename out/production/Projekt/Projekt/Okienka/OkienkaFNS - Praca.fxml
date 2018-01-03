@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.Okienka.PracaKontroler">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekt.KontroleryPracy.PracaKontroler">
    <children>
       <TableView fx:id="pracaTable" layoutX="32.0" layoutY="100.0" prefHeight="417.0" prefWidth="944.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="48.0">
          <columns>

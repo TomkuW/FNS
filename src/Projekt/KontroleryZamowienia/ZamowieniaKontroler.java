@@ -3,7 +3,6 @@ package Projekt.KontroleryZamowienia;
 
 import Projekt.DAO.ZamowieniaDAO;
 import Projekt.Modele.Zamowienie;
-import Projekt.Okienka.Faktura;
 import Projekt.PodlaczonieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -281,7 +280,7 @@ public class ZamowieniaKontroler implements Initializable {
                 ResultSet rs3 = ConntectToDB.getData("SELECT *" +
                         " from zamowienia z, klienci k WHERE z.zamowienia_id = '" + id + "' AND k.klient_id = z.klient_id");
 
-                Faktura f1 = new Faktura(dates, ConntectToDB.getCurrentUser(), rs2, rs3);
+                Faktura f1 = new Faktura(ConntectToDB.getCurrentUser(), rs2, rs3);
                 f1.create();
 
 
