@@ -58,8 +58,9 @@ public class ZamowieniaDAO {
      */
     public static ObservableList<Zamowienie> wyszukajZamowienie(String wyrazenie) throws SQLException, ClassNotFoundException {
 
-        String selectStmt = "SELECT z.zamowienia_id,z.klient_id, k.imie,k.nazwisko,k.ulica, k.miejscowosc," +
-                "z.pakiet_id, u.nazwa, z.pracownik_id, p.imie, p.nazwisko, z.umowa_od, z.umowa_do, z.status"
+        String selectStmt = "SELECT z.zamowienia_id,z.klient_id, k.imie,k.nazwisko,k.ulica,k.nr_dom, k.miejscowosc," +
+                " k.nr_telefon, z.pakiet_id, u.nazwa,u.technologia, u.predkosc, z.pracownik_id, p.imie, p.nazwisko, z" +
+                ".umowa_od, z.umowa_do, z.status"
                 + " FROM zamowienia z,klienci k,pracownicy p, pakiety u WHERE k.klient_id = z.klient_id AND u" +
                 ".pakiet_id = z.pakiet_id and p.pracownik_id = z.pracownik_id" +
                 " AND zamowienia_id LIKE \"%" + wyrazenie + "%\"";
@@ -97,8 +98,8 @@ public class ZamowieniaDAO {
             z.setImieKZ(rs.getString("klienci.imie"));
             z.setNazwiskoKZ(rs.getString("klienci.nazwisko"));
             z.setUlicaKZ(rs.getString("klienci.ulica"));
-            z.setNr_telefonKZ(rs.getString("klienci.nr_dom"));
-            z.setNr_domKZ(rs.getString("klienci.nr_telefon"));
+            z.setNr_domKZ(rs.getString("klienci.nr_dom"));
+            z.setNr_telefonKZ(rs.getString("klienci.nr_telefon"));
             z.setMiejscowoscKZ(rs.getString("klienci.miejscowosc"));
             z.setPakiet_id(rs.getInt("pakiet_id"));
             z.setNazwaPakietZ(rs.getString("pakiety.nazwa"));

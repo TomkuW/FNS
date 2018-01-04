@@ -243,8 +243,8 @@ public class ZamowieniaKontroler implements Initializable {
                     wybraapozycja.setText(String.valueOf(z.getZamowienia_id()));
                     id = z.getZamowienia_id();
                 }
-                catch (NullPointerException e){
-                    System.out.println("false");
+                catch (Exception e){
+
                 }
             }
         });

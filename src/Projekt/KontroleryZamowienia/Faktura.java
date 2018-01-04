@@ -8,6 +8,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -78,7 +79,7 @@ public class Faktura {
             document.close();
 
         } catch (Exception e) {
-            e.printStackTrace();
+           System.out.println("false");
         }
     }
 
