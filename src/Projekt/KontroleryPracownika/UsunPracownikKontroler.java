@@ -55,6 +55,7 @@ public class UsunPracownikKontroler implements Initializable {
             PracownikDAO.pokazPracownik();
         } catch (Exception e) {
             e.printStackTrace();
+			
         }
 
     }

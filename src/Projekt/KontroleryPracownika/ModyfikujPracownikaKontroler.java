@@ -117,6 +117,7 @@ public class ModyfikujPracownikaKontroler implements Initializable {
 
         } catch (SQLException e) {
             e.printStackTrace();
+			
         }
     }
 

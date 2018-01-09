@@ -44,6 +44,7 @@ public class PracownikDAO {
             System.out.println("Operacja wyboru SQL nie powiodła sie " + e);
 
             throw e;
+			
         }
 
     }

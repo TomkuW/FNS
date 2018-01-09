@@ -50,6 +50,7 @@ public class Pracownik {
         this.haslo = new SimpleStringProperty();
         this.typ_pracownika = new SimpleStringProperty();
         this.wynagrodzenieRoczne = new SimpleDoubleProperty();
+		
 
     }
 
