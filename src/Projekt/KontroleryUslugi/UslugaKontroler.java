@@ -253,7 +253,6 @@ public class UslugaKontroler implements Initializable {
         }
     }
 
-
     /**
      * Metoda wyświetlająca pozycje w tabeli
      *
@@ -295,5 +294,6 @@ public class UslugaKontroler implements Initializable {
         }
         pokazUsluga();
     }
+
 
 }

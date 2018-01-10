@@ -35,7 +35,6 @@ public class UsunZamowienieKontroler implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-
     /**
      *  Metoda usuwająca zamowienia z bazy danych
      *

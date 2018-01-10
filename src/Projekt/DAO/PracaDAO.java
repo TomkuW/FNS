@@ -45,7 +45,6 @@ public class PracaDAO {
         }
     }
 
-
     /**
      * Metoda zwraca liste obiektów ResultSet
      * @param rs z bazy danych

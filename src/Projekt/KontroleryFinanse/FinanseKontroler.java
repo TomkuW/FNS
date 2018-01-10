@@ -102,7 +102,7 @@ public class FinanseKontroler implements Initializable {
      */
     @FXML
     private void miejsceWTabeliFinansePracownika(ObservableList<Pracownik> prcData) {
-        //Set items to the ContractorTable
+
         finansePracownikaTable.setItems(prcData);
     }
 
@@ -221,6 +221,7 @@ public class FinanseKontroler implements Initializable {
             String date2 = formatter.format(LocalDate.now());
             String[] dates = {date1, date2, currentDate};
 
+
             ResultSet rs = ConntectToDB.getData("SELECT z.pakiet_id, u.nazwa, z.umowa_od, COUNT" +
                     "(u.pakiet_id) as ilosc, u.cena" +
                     " from zamowienia z, pakiety u WHERE z.umowa_od BETWEEN '" + dates[0] + "' AND '" +
@@ -276,7 +277,6 @@ public class FinanseKontroler implements Initializable {
             e.printStackTrace();
         }
     }
-
 
 }
 

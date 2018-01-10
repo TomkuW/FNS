@@ -117,7 +117,6 @@ public class ModyfikujPracownikaKontroler implements Initializable {
 
         } catch (SQLException e) {
             e.printStackTrace();
-			
         }
     }
 
@@ -162,7 +161,6 @@ public class ModyfikujPracownikaKontroler implements Initializable {
         stage.close();
 
     }
-
 
 }
 

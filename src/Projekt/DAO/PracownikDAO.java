@@ -44,7 +44,6 @@ public class PracownikDAO {
             System.out.println("Operacja wyboru SQL nie powiodła sie " + e);
 
             throw e;
-			
         }
 
     }
@@ -79,7 +78,6 @@ public class PracownikDAO {
 
             return PracownikList;
         } catch (SQLException e) {
-
             System.out.println("Operacja wyboru SQL nie powiodła sie: " + e);
 
             throw e;

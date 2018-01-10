@@ -59,7 +59,6 @@ public class UsunUslugaKontroler implements Initializable {
             }
         }
 
-
     /**
      * Metoda umożliwiająca anulacje potwierdzenia usuwania, zamyka okno usuwania pakietu bez wprowadzonych zmian
      */
@@ -68,6 +67,8 @@ public class UsunUslugaKontroler implements Initializable {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
         stage.setTitle("Anuluj");
+
+
 
 
     }

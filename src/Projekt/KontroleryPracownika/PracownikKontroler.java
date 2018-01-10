@@ -183,9 +183,7 @@ public class PracownikKontroler implements Initializable {
             e.printStackTrace();
         }
         pokazPracownik();
-		
     }
-	
 
     /**
      * Metoda wyświetlająca okno z możliwością modyfikacji danych pracownika
@@ -330,6 +328,5 @@ public class PracownikKontroler implements Initializable {
         }
 
     }
-
 
 }

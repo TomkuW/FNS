@@ -192,7 +192,6 @@ public class DodajZamowienieKontroler implements Initializable {
 
     }
 
-
     @FXML
     private TableColumn<Klient, String> imieColumn1;
     @FXML

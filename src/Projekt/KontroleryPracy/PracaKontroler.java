@@ -183,7 +183,6 @@ public class PracaKontroler implements Initializable {
         }
     }
 
-
     /**
      * Metoda wyświetlająca okno z możliwością modyfikacji statusu zamowienia
      * @throws Exception Zgłasza, gdy wystapi nieoczekiwany błąd.
@@ -217,5 +216,6 @@ public class PracaKontroler implements Initializable {
         }
         pokazPraca();
     }
+
 
 }

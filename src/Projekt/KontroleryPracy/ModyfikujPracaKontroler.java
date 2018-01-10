@@ -94,6 +94,5 @@ public class ModyfikujPracaKontroler implements Initializable {
         stage.close();
 
     }
-
 }
 

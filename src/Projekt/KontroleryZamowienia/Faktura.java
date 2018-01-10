@@ -44,7 +44,6 @@ public class Faktura {
     private ResultSet rs3;
     private String date1, date2;
 
-
     /**
      * Konstruktor
      *

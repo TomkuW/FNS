@@ -26,7 +26,6 @@ import java.util.ResourceBundle;
  * <p>
  * Created by Tomek on 2017-11-14.
  */
-
 public class LoginKontroler implements Initializable {
 
     public Login loginModel = new Login();

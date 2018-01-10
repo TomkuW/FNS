@@ -304,5 +304,4 @@ public class Klient {
     public void setEmail(String email) {
         this.email.set(email);
     }
-
 }

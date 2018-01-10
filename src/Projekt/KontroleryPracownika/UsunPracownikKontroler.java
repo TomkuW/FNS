@@ -33,7 +33,6 @@ public class UsunPracownikKontroler implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-
     /**
      * Metoda usuwająca pracownika z bazy danych
      *
@@ -56,7 +55,6 @@ public class UsunPracownikKontroler implements Initializable {
             PracownikDAO.pokazPracownik();
         } catch (Exception e) {
             e.printStackTrace();
-			
         }
 
     }
