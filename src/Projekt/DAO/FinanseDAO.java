@@ -169,7 +169,8 @@ public class FinanseDAO {
             ObservableList<Pracownik> PracownikList = getPracownikFinanseList(rs);
 
             return PracownikList;
-        } catch (SQLException e) {
+        }
+            catch (SQLException e) {
             System.out.println("Operacja SELECT nie powiodła się: " + e);
 
             throw e;

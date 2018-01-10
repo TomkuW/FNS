@@ -237,6 +237,7 @@ public class KlientKontroler implements Initializable {
             e.printStackTrace();
         }
         pokazKlient();
+
     }
 
 

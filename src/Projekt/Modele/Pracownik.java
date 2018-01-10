@@ -33,6 +33,7 @@ public class Pracownik {
     /**
      * Konstruktor
      */
+
     public Pracownik() {
         this.pracownik_id = new SimpleIntegerProperty();
         this.imie = new SimpleStringProperty();

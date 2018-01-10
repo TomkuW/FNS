@@ -131,4 +131,5 @@ public class OknoModowolKontroler implements Initializable{
         }
 
     }
+
 }

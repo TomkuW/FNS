@@ -111,6 +111,7 @@ public class ModyfikujKlientaKontroler implements Initializable {
         }
     }
 
+
     /**
      * Metoda umożliwiająca anulacje modyfikacji, zamyka okno modyfikazji bez wprowadzonych zmian
      */

@@ -43,6 +43,7 @@ public class ZamowieniaDAO {
 
             return ZamowienList;
         } catch (SQLException e) {
+
             System.out.println("Operacja SELECT nie powiodła się: " + e);
 
             throw e;

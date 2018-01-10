@@ -196,6 +196,7 @@ public class WPDF {
             table.addCell(String.valueOf(df.format(rs.getDouble("u.cena") * rs.getInt("ilosc"))));
         }
 
+
         document.add(table);
 
     }

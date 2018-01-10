@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
  *
  * Created by Tomek on 2017-12-20.
  */
+
 public class WitajKontroler implements Initializable {
 
     @FXML

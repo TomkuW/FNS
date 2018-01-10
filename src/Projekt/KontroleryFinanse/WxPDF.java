@@ -50,6 +50,7 @@ public class WxPDF {
     /**
      * Metoda tworzy plik PDF z raportem
      */
+
     public void create() {
         try {
             document = new Document();

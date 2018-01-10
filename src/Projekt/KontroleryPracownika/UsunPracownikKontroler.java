@@ -33,6 +33,7 @@ public class UsunPracownikKontroler implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
+
     /**
      * Metoda usuwająca pracownika z bazy danych
      *

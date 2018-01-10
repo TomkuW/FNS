@@ -562,4 +562,5 @@ public class Zamowienie {
     public void setPredkoscPakietZ(String predkoscPakietZ) {
         this.predkoscPakietZ.set(predkoscPakietZ);
     }
+
 }

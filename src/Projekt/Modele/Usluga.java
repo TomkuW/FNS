@@ -170,4 +170,5 @@ public class Usluga {
     public void setOkres(int okres) {
         this.okres.set(okres);
     }
+
 }

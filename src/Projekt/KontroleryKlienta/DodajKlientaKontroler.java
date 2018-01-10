@@ -86,6 +86,7 @@ public class DodajKlientaKontroler {
         }
     }
 
+
     /**
      * Metoda umożliwiająca anulacje zamówienia, zamknięcie okna dodaj.
      */

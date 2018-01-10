@@ -250,6 +250,7 @@ public class ZamowieniaKontroler implements Initializable {
         });
     }
 
+
     /**
      * Metoda tworzenia Faktury w oparciu o sprzedane zamówienia
      * @throws SQLException Zgłasza, gdy występuje problem z zapytaniem SQL

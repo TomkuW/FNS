@@ -68,6 +68,7 @@ public class UsunKlientaKontroler implements Initializable {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
+
 }
 
 

@@ -147,6 +147,7 @@ public class KlientDAO {
 
             System.err.println("Blad przy aktualizacji danych klienta:" + e);
 
+
             throw e;
         }
     }
