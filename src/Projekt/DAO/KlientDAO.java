@@ -41,6 +41,7 @@ public class KlientDAO {
             System.out.println("Operacja wyboru SQL nie powiodła sie: " + e);
 
             throw e;
+            
 
         }
     }

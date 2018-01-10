@@ -48,6 +48,7 @@ public class FinanseDAO {
             System.out.println("Operacja SELECT nie powiodła sie: " + e);
 
             throw e;
+            
         }
     }
 

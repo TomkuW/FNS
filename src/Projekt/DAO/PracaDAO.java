@@ -42,6 +42,7 @@ public class PracaDAO {
             System.out.println("Operacja SELECT nie powiodła się: " + e);
 
             throw e;
+            
         }
     }
 

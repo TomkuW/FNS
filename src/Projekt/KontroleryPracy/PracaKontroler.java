@@ -68,6 +68,7 @@ public class PracaKontroler implements Initializable {
      */
     public static int getSelectedPracaZamowienieId() {
         return wybierzZamowienieId;
+        
     }
 
     /**
