@@ -81,7 +81,7 @@ public class PracownikKontroler implements Initializable {
         conn = ConntectToDB.Connector();
         imieColumn.setCellValueFactory(cellData -> cellData.getValue().imieProperty());
         nazwiskoColumn.setCellValueFactory(cellData -> cellData.getValue().nazwiskoProperty());
-        zawodColumn.setCellValueFactory(cellData -> cellData.getValue().zawodProperty());
+        zawodColumn.setCellValueFactory(cellData -> cellData.getValue().typ_pracownikaProperty());
         peselColumn.setCellValueFactory(cellData -> cellData.getValue().PESELProperty());
         ulicaColumn.setCellValueFactory(cellData -> cellData.getValue().ulicaProperty());
         nr_domuColumn.setCellValueFactory(cellData -> cellData.getValue().nr_domuProperty());

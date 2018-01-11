@@ -47,7 +47,6 @@ public class ModyfikujPracaKontroler implements Initializable {
             stat = rs.getString("status");
 
            status_z.setValue(stat);
-            
 
         } catch (SQLException e) {
             e.printStackTrace();

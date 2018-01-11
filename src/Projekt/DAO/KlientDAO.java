@@ -41,7 +41,6 @@ public class KlientDAO {
             System.out.println("Operacja wyboru SQL nie powiodła sie: " + e);
 
             throw e;
-            
 
         }
     }
@@ -95,7 +94,7 @@ public class KlientDAO {
         while (rs.next()) {
             Klient klient = new Klient();
             klient.setKlient_id(rs.getInt("klient_id"));
-            klient.setImie(rs.getString("Imie"));
+            klient.setImie(rs.getString("imie"));
             klient.setNazwisko(rs.getString("nazwisko"));
             klient.setPESEL(rs.getString("PESEL"));
             klient.setMiejscowosc(rs.getString("miejscowosc"));

@@ -46,7 +46,6 @@ public class ZamowieniaDAO {
             System.out.println("Operacja SELECT nie powiodła się: " + e);
 
             throw e;
-            
         }
     }
 
@@ -205,7 +204,7 @@ public class ZamowieniaDAO {
      */
     public static ObservableList<Pracownik> pokazPracownik() throws SQLException, ClassNotFoundException {
 
-        String selectStmt = "SELECT * FROM pracownicy WHERE typ_pracownika = 'Wykonawca'";
+        String selectStmt = "SELECT * FROM pracownicy WHERE typ_pracownika LIKE 'Pracownik'";
 
         try {
 

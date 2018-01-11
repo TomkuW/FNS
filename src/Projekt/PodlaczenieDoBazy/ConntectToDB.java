@@ -53,7 +53,7 @@ public class ConntectToDB {
         try {
 
             Class.forName("org.mariadb.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/fns_db", "root", "bazasql");
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/fns_db", "root", "");
 
             return conn;
         } catch (ClassNotFoundException e) {
