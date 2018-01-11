@@ -85,5 +85,10 @@
          </font>
       </Label>
       <Label fx:id="wybraapozycja" layoutX="270.0" layoutY="561.0" prefHeight="17.0" prefWidth="101.0" text="&lt;ID zamówienia&gt;" />
+      <Button fx:id="s" layoutX="270.0" layoutY="590.0" mnemonicParsing="false" onAction="#wybierzPlikiDoOtwarcia" prefHeight="25.0" prefWidth="125.0" text="Otwórz pliki PDF">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

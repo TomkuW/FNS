@@ -6,6 +6,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -55,8 +56,17 @@ public class WPDF {
         try {
             document = new Document();
 
+
+            File f = new File(System.getProperty("user.home")+ File.separator + "Raporty");
+            if(!f.exists()) {
+                f.mkdir();
+
+
+            }
             PdfWriter.getInstance(document, new FileOutputStream
-                    ("Raporty\\Raport_Roczny_Ilosc_Sprzedazy_" + currentDate + ".pdf"));
+                    (System.getProperty("user.home")+"\\Raporty\\Raport_Roczny_Ilosc_Sprzedazy_" +
+                            currentDate + "" +
+                            ".pdf"));
 
             document.open();
             addMetaData(document);

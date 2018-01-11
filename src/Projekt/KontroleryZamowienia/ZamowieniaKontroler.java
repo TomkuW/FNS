@@ -6,6 +6,7 @@ import Projekt.Modele.Zamowienie;
 import Projekt.PodlaczenieDoBazy.ConntectToDB;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +14,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -24,6 +32,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Klasa kontrolera FXML zawierająca metody zarządzania zamowieniami.
@@ -74,6 +85,9 @@ public class ZamowieniaKontroler implements Initializable {
     private int id;
     @FXML
     private Label wybraapozycja;
+    @FXML
+    private Button s;
+
 
     /**
      * Metoda wybierająca zaznaczony wiersz z tabeli
@@ -276,11 +290,11 @@ public class ZamowieniaKontroler implements Initializable {
                 Faktura f1 = new Faktura(ConntectToDB.getCurrentUser(), rs2, rs3);
                 f1.create();
 
-
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Informacja");
-                alert.setHeaderText(null);
-                alert.setContentText("Utworzono Fakture VAT");
+                alert.setHeaderText("Utworzono Fakture VAT");
+                alert.setContentText("Plik PDF znajduje się w lokalizacji: "+ System.getProperty("user.home")
+                        +"\\Faktury");
 
                 alert.showAndWait();
             }
@@ -296,8 +310,51 @@ public class ZamowieniaKontroler implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 
+    /**
+     * Metoda uruchamia okno wyboru plików do otwarcia
+     */
+    @FXML
+    private void wybierzPlikiDoOtwarcia() {
+
+        Stage stage = (Stage) s.getScene().getWindow();
+
+        final FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Wybieranie plików PDF");
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")+"\\Faktury"));
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Pliki PDF", "*.pdf"));
+
+        s.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(final ActionEvent e) {
+                        File file = fileChooser.showOpenDialog(stage);
+                        if (file != null) {
+                            openFile(file);
+                        }
+                    }
+                });
+
+    }
+
+    /**
+     * Metoda otwierająca wskazane pliki
+     * @param file pkik który ma być otworzony
+     */
+    private void openFile(File file) {
+        Desktop desktop = Desktop.getDesktop();
+        try {
+
+            desktop.open(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 
 

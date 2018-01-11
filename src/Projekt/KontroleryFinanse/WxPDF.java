@@ -5,6 +5,8 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -53,8 +55,18 @@ public class WxPDF {
     public void create() {
         try {
             document = new Document();
+
+            String path = System.getProperty("user.home") + File.separator + "Raporty";
+            File f = new File(path);
+            if(!f.exists()) {
+                f.createNewFile();
+                f.getParentFile().mkdirs();
+                f.createNewFile();
+            }
+
             PdfWriter.getInstance(document, new FileOutputStream
-                    ("Raporty\\Raport_Wypłacanych_Wynagrodzeń_" + currentDate
+                    (System.getProperty("user.home")+"\\Raporty\\Raport_Wypłacanych_Wynagrodzeń_" +
+                            currentDate
                             + ".pdf"));
 
             document.open();

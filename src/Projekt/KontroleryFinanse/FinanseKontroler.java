@@ -7,10 +7,17 @@ import Projekt.PodlaczenieDoBazy.ConntectToDB;
 
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.*;
 import java.net.URL;
 import java.sql.*;
@@ -78,6 +85,8 @@ public class FinanseKontroler implements Initializable {
     private TextField poleSzukaniaPraconika;
     @FXML
     private static int wybierzFinansePracownikId;
+    @FXML
+    private Button p;
 
     /**
      * Metoda wyszukująca dane finansów Pracownika i wyświetlająca te wybrane w tabeli
@@ -232,8 +241,10 @@ public class FinanseKontroler implements Initializable {
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Raport Zbiorczy");
-            alert.setHeaderText(null);
-            alert.setContentText("Raport Zbiorczy ilości sprzedanych usług został stworzony!");
+            alert.setHeaderText("Raport Zbiorczy ilości sprzedanych usług został stworzony!");
+            alert.setContentText("Plik PDF znajduje się w lokalizacji: "+ System.getProperty("user.home")
+                    +"\\Raporty");
+
 
             alert.showAndWait();
 
@@ -268,14 +279,57 @@ public class FinanseKontroler implements Initializable {
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Raport Zbiorczy");
-            alert.setHeaderText(null);
-            alert.setContentText("Raport Zbiorczy wynagrodzeń pracowników został stworzony!");
+            alert.setHeaderText("Raport Zbiorczy wynagrodzeń pracowników został stworzony!");
+            alert.setContentText("Plik PDF znajduje się w lokalizacji: "+ System.getProperty("user.home")
+                    +"\\Raporty");
 
             alert.showAndWait();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Metoda uruchamia okno wyboru plików do otwarcia
+     */
+    @FXML
+    private void wybierzPlikiDoOtwarciaPDF() {
+
+        Stage stage = (Stage) p.getScene().getWindow();
+
+        final FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Wybieranie plików PDF");
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")+"\\Raporty"));
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Pliki PDF", "*.pdf"));
+
+        p.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(final ActionEvent e) {
+                        File file = fileChooser.showOpenDialog(stage);
+                        if (file != null) {
+                            openFile(file);
+                        }
+                    }
+                });
+
+    }
+
+    /**
+     * Metoda otwierająca wskazane pliki
+     * @param file pkik który ma być otworzony
+     */
+    private void openFile(File file) {
+        Desktop desktop = Desktop.getDesktop();
+        try {
+
+            desktop.open(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

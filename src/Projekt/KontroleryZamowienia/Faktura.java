@@ -6,6 +6,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -66,8 +67,15 @@ public class Faktura {
         try {
             document = new Document();
 
+            String path = System.getProperty("user.home") + File.separator + "Faktury";
+            File fq = new File(path);
+            if(!fq.exists()) {
+                fq.mkdir();
+            }
+
             PdfWriter.getInstance(document, new FileOutputStream
-                    ("Faktury\\Faktura_Sprzedazy_" + ZamowieniaKontroler.getSelectedZamowienieId() +
+                    (System.getProperty("user.home")+"\\Faktury\\Faktura_Sprzedazy_" + ZamowieniaKontroler
+                            .getSelectedZamowienieId() +
                             "_" + date1 +".pdf"));
 
             document.open();
