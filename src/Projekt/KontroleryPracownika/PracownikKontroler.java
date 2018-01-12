@@ -282,51 +282,62 @@ public class PracownikKontroler implements Initializable {
             wynagrodzenie = wynagrodzenie.replace(",",".");
         }
 
-        String sql = "insert into pracownicy (imie,nazwisko,zawod,PESEL,ulica,nr_domu,miejscowosc,nr_telefon, email, " +
-                "login, haslo, wynagrodzenie,typ_pracownika,data_zatrudnienia) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        Connection conn = ConntectToDB.Connector();
-        PreparedStatement prepStmt = null;
-        try {
-            if(data_zatrudnienia_pracownika.getValue() == null || wynagrodzenie_pracownika == null){
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Informacja");
-                alert.setHeaderText(null);
-                alert.setContentText("Aby dodać pracownika, wprowadź wszystkie potrzebne dane!");
+        if( PESEL.length() !=11){
 
-                alert.showAndWait();
-            }else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Uwaga");
+            alert.setHeaderText(null);
+            alert.setContentText("PESEL powinien zawierać 11 znaków!");
+            alert.showAndWait();
+            PESEL = pesel_pracownika.getText();
 
-                prepStmt = conn.prepareStatement(sql);
-                prepStmt.setString(1, imie);
-                prepStmt.setString(2, nazwisko);
-                prepStmt.setString(3, zawod);
-                prepStmt.setString(4, PESEL);
-                prepStmt.setString(5, ulica);
-                prepStmt.setString(6, nr_domu);
-                prepStmt.setString(7, miejscowosc);
-                prepStmt.setString(8, nr_telefon);
-                prepStmt.setString(9, email);
-                prepStmt.setString(10, login);
-                prepStmt.setString(11, haslo);
-                prepStmt.setString(12, wynagrodzenie);
-                prepStmt.setString(13, t_pracownika);
-                prepStmt.setDate(14, Date.valueOf(data));
-                prepStmt.executeUpdate();
+        }else {
 
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Informacja");
-                alert.setHeaderText(null);
-                alert.setContentText("Dodano pracownika!");
+            String sql = "insert into pracownicy (imie,nazwisko,zawod,PESEL,ulica,nr_domu,miejscowosc,nr_telefon, email, " +
+                    "login, haslo, wynagrodzenie,typ_pracownika,data_zatrudnienia) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            Connection conn = ConntectToDB.Connector();
+            PreparedStatement prepStmt = null;
+            try {
+                if (data_zatrudnienia_pracownika.getValue() == null || wynagrodzenie_pracownika == null) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Informacja");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Aby dodać pracownika, wprowadź wszystkie potrzebne dane!");
 
-                alert.showAndWait();
-                pokazPracownik();
+                    alert.showAndWait();
+                } else {
+
+                    prepStmt = conn.prepareStatement(sql);
+                    prepStmt.setString(1, imie);
+                    prepStmt.setString(2, nazwisko);
+                    prepStmt.setString(3, zawod);
+                    prepStmt.setString(4, PESEL);
+                    prepStmt.setString(5, ulica);
+                    prepStmt.setString(6, nr_domu);
+                    prepStmt.setString(7, miejscowosc);
+                    prepStmt.setString(8, nr_telefon);
+                    prepStmt.setString(9, email);
+                    prepStmt.setString(10, login);
+                    prepStmt.setString(11, haslo);
+                    prepStmt.setString(12, wynagrodzenie);
+                    prepStmt.setString(13, t_pracownika);
+                    prepStmt.setDate(14, Date.valueOf(data));
+                    prepStmt.executeUpdate();
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Informacja");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Dodano pracownika!");
+
+                    alert.showAndWait();
+                    pokazPracownik();
+                }
+            } catch (SQLException | ClassNotFoundException e) {
+
+                System.out.print("Błąd podczas dodawania klienta" + e);
+                e.printStackTrace();
             }
-        } catch (SQLException |ClassNotFoundException e) {
-
-            System.out.print("Błąd podczas dodawania klienta" + e);
-            e.printStackTrace();
         }
-
     }
 
 }

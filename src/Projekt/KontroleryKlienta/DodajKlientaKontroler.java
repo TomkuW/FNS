@@ -53,36 +53,47 @@ public class DodajKlientaKontroler {
         String nr_dom = nr_dom_klienta.getText();
         String nr_telefon = telefon_klienta.getText();
 
-        String sql = "insert into klienci (imie,nazwisko,PESEL,miejscowosc,ulica,nr_dom,nr_telefon) values(?,?,?,?,?," +
-                "?,?)";
-        Connection conn = ConntectToDB.Connector();
-        PreparedStatement prepStmt = null;
-        try {
+        if(PESEL.length() != 11){
 
-            prepStmt = conn.prepareStatement(sql);
-            prepStmt.setString(1, imie);
-            prepStmt.setString(2, nazwisko);
-            prepStmt.setString(3, PESEL);
-            prepStmt.setString(4, miejscowosc);
-            prepStmt.setString(5, ulica);
-            prepStmt.setString(6, nr_dom);
-            prepStmt.setString(7, nr_telefon);
-            prepStmt.executeUpdate();
-
+            PESEL = pesel_klienta.getText();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Dodawanie klienta");
+            alert.setTitle("Uwaga");
             alert.setHeaderText(null);
-            alert.setContentText("Dodano klienta do bazy programu");
+            alert.setContentText("PESEL powinien zawierać 11 znaków!");
             alert.showAndWait();
+        }else {
 
-            Stage stage = (Stage) dodaj.getScene().getWindow();
-            stage.close();
+            String sql = "insert into klienci (imie,nazwisko,PESEL,miejscowosc,ulica,nr_dom,nr_telefon) values(?,?,?,?,?," +
+                    "?,?)";
+            Connection conn = ConntectToDB.Connector();
+            PreparedStatement prepStmt = null;
+            try {
+
+                prepStmt = conn.prepareStatement(sql);
+                prepStmt.setString(1, imie);
+                prepStmt.setString(2, nazwisko);
+                prepStmt.setString(3, PESEL);
+                prepStmt.setString(4, miejscowosc);
+                prepStmt.setString(5, ulica);
+                prepStmt.setString(6, nr_dom);
+                prepStmt.setString(7, nr_telefon);
+                prepStmt.executeUpdate();
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Dodawanie klienta");
+                alert.setHeaderText(null);
+                alert.setContentText("Dodano klienta do bazy programu");
+                alert.showAndWait();
+
+                Stage stage = (Stage) dodaj.getScene().getWindow();
+                stage.close();
 
 
-        } catch (SQLException e) {
+            } catch (SQLException e) {
 
-            System.out.print("Błąd podczas dodawania klienta" + e);
-            throw e;
+                System.out.print("Błąd podczas dodawania klienta" + e);
+                throw e;
+            }
         }
     }
 
