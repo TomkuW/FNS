@@ -179,7 +179,7 @@ public class PracaKontroler implements Initializable {
             informacja.setText((ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser
                     ()[2]) + " ma przypisane następujące usługi: ");
         }else {
-            informacja.setText((ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser()[2])+ " nie jest pracownikiem/wykonwacą!");
+            informacja.setText((ConntectToDB.getCurrentUser()[1]+" "+ConntectToDB.getCurrentUser()[2])+ " nie jest wykonwacą!");
         }
     }
 

@@ -104,8 +104,8 @@ public class PracownikKontroler implements Initializable {
         });
 
             typ_pracownika.getItems().removeAll(typ_pracownika.getItems());
-            typ_pracownika.getItems().addAll("Pracownik", "Kierownik", "Administrator","Ksiegowy", "Handlowiec");
-            typ_pracownika.getSelectionModel().select("Pracownik");
+            typ_pracownika.getItems().addAll("Wykonawca", "Kierownik", "Administrator","Ksiegowy", "Handlowiec");
+            typ_pracownika.getSelectionModel().select("Wykonawca");
 
     }
 

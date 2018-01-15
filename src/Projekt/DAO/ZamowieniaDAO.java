@@ -204,7 +204,7 @@ public class ZamowieniaDAO {
      */
     public static ObservableList<Pracownik> pokazPracownik() throws SQLException, ClassNotFoundException {
 
-        String selectStmt = "SELECT * FROM pracownicy WHERE typ_pracownika LIKE 'Pracownik'";
+        String selectStmt = "SELECT * FROM pracownicy WHERE typ_pracownika LIKE 'Wykonawca'";
 
         try {
 
